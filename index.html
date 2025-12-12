@@ -854,7 +854,7 @@
 
         @keyframes slideIn {
             from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         /* Login Page */
@@ -976,6 +976,23 @@
         .demo-credentials p {
             margin-bottom: 5px;
             color: #666;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e3e6f0;
+        }
+
+        .register-link a {
+            color: #4e73df;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -1343,8 +1360,223 @@
             opacity: 0.5;
             cursor: not-allowed;
         }
+
+        /* User Role Badges */
+        .role-admin {
+            background-color: rgba(78, 115, 223, 0.2);
+            color: var(--primary-color);
+        }
+
+        .role-manager {
+            background-color: rgba(246, 194, 62, 0.2);
+            color: var(--warning-color);
+        }
+
+        .role-staff {
+            background-color: rgba(28, 200, 138, 0.2);
+            color: var(--secondary-color);
+        }
+
+        /* Activity Log */
+        .activity-log {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .activity-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #e3e6f0;
+            display: flex;
+            gap: 10px;
+        }
+
+        body.dark-theme .activity-item {
+            border-bottom: 1px solid #4a5568;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #f8f9fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .activity-content h5 {
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .activity-content p {
+            font-size: 0.8rem;
+            color: #858796;
+        }
+
+        body.dark-theme .activity-content p {
+            color: #a0aec0;
+        }
+
+        /* User Profile */
+        .profile-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .profile-stat {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fc;
+            border-radius: 8px;
+        }
+
+        body.dark-theme .profile-stat {
+            background-color: #4a5568;
+        }
+
+        .profile-stat h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        body.dark-theme .profile-stat h4 {
+            color: #e2e8f0;
+        }
+
+        .profile-stat p {
+            font-size: 0.8rem;
+            color: #858796;
+        }
+
+        body.dark-theme .profile-stat p {
+            color: #a0aec0;
+        }
+
+
+
+        /* ... CSS ... */
+
+        /* Revenue Progress Bar */
+        .revenue-progress {
+            margin-top: 20px;
+        }
+
+        .progress-label {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: #858796;
+        }
+
+        body.dark-theme .progress-label {
+            color: #a0aec0;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background-color: #e3e6f0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        body.dark-theme .progress-bar {
+            background-color: #4a5568;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4e73df, #224abe);
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-value {
+            font-size: 0.85rem;
+            color: #858796;
+            text-align: right;
+        }
+
+        /* Revenue Item */
+        .revenue-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e3e6f0;
+        }
+
+        body.dark-theme .revenue-item {
+            border-bottom: 1px solid #4a5568;
+        }
+
+        .revenue-item:last-child {
+            border-bottom: none;
+        }
+
+        .revenue-label {
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+
+        .revenue-value {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Small Button */
+        .btn-sm {
+            padding: 5px 10px;
+            font-size: 0.85rem;
+        }
+
+        /* Success Button */
+        .success-btn {
+            background: none;
+            border: none;
+            color: #858796;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .success-btn:hover {
+            background-color: rgba(28, 200, 138, 0.1);
+            color: var(--secondary-color);
+        }
+
+        /* Tooltip */
+        [title]:hover:after {
+            content: attr(title);
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 1000;
+            margin-top: 5px;
+        }
+
+
+
     </style>
 </head>
+
 <body>
     <!-- Login Page -->
     <div id="loginPage" class="login-page">
@@ -1353,7 +1585,7 @@
                 <div class="login-header">
                     <i class="fas fa-hotel"></i>
                     <h1>Grand Plaza Hotel</h1>
-                    <p>Complete Management System</p>
+                    <p>Multi-User Management System</p>
                 </div>
                 
                 <div class="login-body">
@@ -1373,9 +1605,18 @@
                         </button>
                         
                         <div class="demo-credentials">
-                            <h4>Demo Credentials:</h4>
-                            <p><strong>Username:</strong> admin</p>
-                            <p><strong>Password:</strong> admin123</p>
+                            <h4>Default Users:</h4>
+                            <p><strong>Admin:</strong> admin / admin123</p>
+                            <p><strong>Manager:</strong> manager / manager123</p>
+                            <p><strong>Staff:</strong> staff / staff123</p>
+                        </div>
+                        
+                        <div class="register-link">
+                            <p>Don't have an account? 
+                                <a href="javascript:void(0)" onclick="showRegisterForm()" style="color: #4e73df; font-weight: 500;">
+                                    Create New Account
+                                </a>
+                            </p>
                         </div>
                     </form>
                 </div>
@@ -1383,7 +1624,7 @@
         </div>
     </div>
 
-    <!-- Main Application (Initially Hidden) -->
+    <!-- Main Application -->
     <div id="appContainer" class="container" style="display: none;">
         <!-- Sidebar Navigation -->
         <nav class="sidebar">
@@ -1429,6 +1670,12 @@
                         <span>Reports</span>
                     </a>
                 </li>
+                <li data-tab="users" id="usersTab" style="display: none;">
+                    <a>
+                        <i class="fas fa-user-cog"></i>
+                        <span>User Management</span>
+                    </a>
+                </li>
                 <li data-tab="settings">
                     <a>
                         <i class="fas fa-cog"></i>
@@ -1443,7 +1690,7 @@
                 </div>
                 <div class="profile-info">
                     <h4 id="loggedInUser">Admin</h4>
-                    <p>admin@grandplaza.com</p>
+                    <p id="loggedInRole">admin@grandplaza.com</p>
                 </div>
                 <button id="logoutBtn" class="logout-btn" title="Logout">
                     <i class="fas fa-sign-out-alt"></i>
@@ -1474,6 +1721,38 @@
             
             <!-- Dashboard Tab -->
             <div id="dashboard" class="tab-content active">
+                <!-- User Info Card -->
+                <div class="card" id="userInfoCard" style="margin-bottom: 1.5rem;">
+                    <div class="card-body">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h3 style="margin-bottom: 5px;">Welcome, <span id="welcomeUserName">User</span>!</h3>
+                                <p style="color: #858796; margin-bottom: 10px;">
+                                    You are logged in as <span id="welcomeUserRole" class="status-badge role-admin">Admin</span>
+                                </p>
+                                <p style="font-size: 0.9rem;">
+                                    <i class="fas fa-clock" style="margin-right: 5px;"></i>
+                                    Last login: <span id="lastLoginTime">Just now</span>
+                                </p>
+                            </div>
+                            <div class="profile-stats">
+                                <div class="profile-stat">
+                                    <h4 id="userBookingsCount">0</h4>
+                                    <p>Your Bookings</p>
+                                </div>
+                                <div class="profile-stat">
+                                    <h4 id="userGuestsCount">0</h4>
+                                    <p>Your Guests</p>
+                                </div>
+                                <div class="profile-stat">
+                                    <h4 id="userActivityCount">0</h4>
+                                    <p>Activities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Stats Cards -->
                 <div class="stats-cards">
                     <div class="card stat-card">
@@ -1482,8 +1761,8 @@
                         </div>
                         <div class="card-content">
                             <h3>Total Rooms</h3>
-                            <h2 id="totalRooms">50</h2>
-                            <p class="card-change positive">+2 this month</p>
+                            <h2 id="totalRooms">0</h2>
+                            <p class="card-change positive">Loading...</p>
                         </div>
                     </div>
                     
@@ -1493,8 +1772,8 @@
                         </div>
                         <div class="card-content">
                             <h3>Occupied</h3>
-                            <h2 id="occupiedRooms">32</h2>
-                            <p class="card-change positive">64% occupancy</p>
+                            <h2 id="occupiedRooms">0</h2>
+                            <p class="card-change positive">0% occupancy</p>
                         </div>
                     </div>
                     
@@ -1504,8 +1783,8 @@
                         </div>
                         <div class="card-content">
                             <h3>Check-ins Today</h3>
-                            <h2 id="checkinsToday">8</h2>
-                            <p class="card-change positive">+3 yesterday</p>
+                            <h2 id="checkinsToday">0</h2>
+                            <p class="card-change positive">Loading...</p>
                         </div>
                     </div>
                     
@@ -1515,8 +1794,8 @@
                         </div>
                         <div class="card-content">
                             <h3>Check-outs Today</h3>
-                            <h2 id="checkoutsToday">5</h2>
-                            <p class="card-change negative">-2 yesterday</p>
+                            <h2 id="checkoutsToday">0</h2>
+                            <p class="card-change negative">Loading...</p>
                         </div>
                     </div>
                 </div>
@@ -1556,7 +1835,7 @@
                                         </tr>
                                     </thead>
                                     <tbody id="recentBookings">
-                                        <!-- Filled by JavaScript -->
+                                        <tr><td colspan="4" style="text-align: center;">No bookings yet</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1564,15 +1843,16 @@
                     </div>
                 </div>
 
-                <!-- Room Status -->
+                <!-- Room Status and Revenue -->
                 <div class="content-row">
+                    <!-- Room Status -->
                     <div class="card">
                         <div class="card-header">
                             <h3>Room Status Overview</h3>
                         </div>
                         <div class="card-body">
                             <div class="room-status-grid" id="roomStatusGrid">
-                                <!-- Filled by JavaScript -->
+                                <!-- Rooms will be loaded here -->
                             </div>
                         </div>
                     </div>
@@ -1585,26 +1865,40 @@
                         <div class="card-body">
                             <div class="revenue-item">
                                 <div class="revenue-label">Today's Revenue</div>
-                                <div class="revenue-value">$2,850</div>
+                                <div class="revenue-value" id="todayRevenue">$0</div>
                             </div>
                             <div class="revenue-item">
                                 <div class="revenue-label">This Week</div>
-                                <div class="revenue-value">$18,420</div>
+                                <div class="revenue-value" id="weekRevenue">$0</div>
                             </div>
                             <div class="revenue-item">
                                 <div class="revenue-label">This Month</div>
-                                <div class="revenue-value">$72,150</div>
+                                <div class="revenue-value" id="monthRevenue">$0</div>
                             </div>
                             <div class="revenue-item">
                                 <div class="revenue-label">YTD Revenue</div>
-                                <div class="revenue-value">$425,300</div>
+                                <div class="revenue-value" id="ytdRevenue">$0</div>
                             </div>
                             <div class="revenue-progress">
-                                <div class="progress-label">Monthly Target</div>
+                                <div class="progress-label">Monthly Target Progress</div>
                                 <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 82%;"></div>
+                                    <div class="progress-fill" id="revenueProgress" style="width: 0%;"></div>
                                 </div>
-                                <div class="progress-value">82% ($72,150 / $88,000)</div>
+                                <div class="progress-value" id="revenueProgressText">0% ($0 / $0)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="card" style="margin-top: 1.5rem;">
+                    <div class="card-header">
+                        <h3>Recent Activities</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-log" id="activityLog">
+                            <div class="empty-state">
+                                <p>No activities yet</p>
                             </div>
                         </div>
                     </div>
@@ -1614,19 +1908,19 @@
                 <div class="quick-actions">
                     <h3>Quick Actions</h3>
                     <div class="action-buttons">
-                        <button class="action-btn" onclick="switchTab('booking'); showNewBookingForm();">
+                        <button class="action-btn" onclick="showNewBookingForm()">
                             <i class="fas fa-plus-circle"></i>
                             <span>New Booking</span>
                         </button>
-                        <button class="action-btn" onclick="switchTab('guests'); showNewGuestForm();">
+                        <button class="action-btn" onclick="showNewGuestForm()">
                             <i class="fas fa-user-plus"></i>
                             <span>Add Guest</span>
                         </button>
-                        <button class="action-btn" onclick="switchTab('billing'); createNewInvoice();">
+                        <button class="action-btn" onclick="createNewInvoice()">
                             <i class="fas fa-file-invoice"></i>
                             <span>Create Invoice</span>
                         </button>
-                        <button class="action-btn" onclick="switchTab('rooms');">
+                        <button class="action-btn" onclick="switchTab('rooms')">
                             <i class="fas fa-bed"></i>
                             <span>Manage Rooms</span>
                         </button>
@@ -1659,7 +1953,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="bookingsTable">
-                                    <!-- Filled by JavaScript -->
+                                    <tr><td colspan="8" style="text-align: center;">No bookings yet</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -1691,7 +1985,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="roomsTable">
-                                    <!-- Filled by JavaScript -->
+                                    <tr><td colspan="7" style="text-align: center;">No rooms added yet</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -1723,7 +2017,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="guestsTable">
-                                    <!-- Filled by JavaScript -->
+                                    <tr><td colspan="7" style="text-align: center;">No guests yet</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -1756,7 +2050,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="invoicesTable">
-                                    <!-- Filled by JavaScript -->
+                                    <tr><td colspan="8" style="text-align: center;">No invoices yet</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -1818,6 +2112,38 @@
                 </div>
             </div>
 
+            <!-- User Management Tab -->
+            <div id="users" class="tab-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>User Management</h3>
+                        <button class="btn btn-primary" onclick="showRegisterForm()">
+                            <i class="fas fa-user-plus"></i> Add New User
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Status</th>
+                                        <th>Created</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="usersTable">
+                                    <!-- Users will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Settings Tab -->
             <div id="settings" class="tab-content">
                 <div class="card">
@@ -1831,19 +2157,19 @@
                                     <h4>Hotel Information</h4>
                                     <div class="form-group">
                                         <label>Hotel Name</label>
-                                        <input type="text" id="hotelName" value="Grand Plaza Hotel" class="form-control">
+                                        <input type="text" id="hotelName" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label>Address</label>
-                                        <input type="text" id="hotelAddress" value="123 Luxury Street, City, Country" class="form-control">
+                                        <input type="text" id="hotelAddress" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label>Contact Phone</label>
-                                        <input type="text" id="hotelPhone" value="+1 (555) 123-4567" class="form-control">
+                                        <input type="text" id="hotelPhone" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" id="hotelEmail" value="info@grandplaza.com" class="form-control">
+                                        <input type="email" id="hotelEmail" class="form-control">
                                     </div>
                                 </div>
                                 
@@ -1851,15 +2177,15 @@
                                     <h4>Room Settings</h4>
                                     <div class="form-group">
                                         <label>Default Check-in Time</label>
-                                        <input type="time" id="checkinTime" value="14:00" class="form-control">
+                                        <input type="time" id="checkinTime" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label>Default Check-out Time</label>
-                                        <input type="time" id="checkoutTime" value="12:00" class="form-control">
+                                        <input type="time" id="checkoutTime" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label>Tax Rate (%)</label>
-                                        <input type="number" id="taxRate" value="10" min="0" max="50" class="form-control">
+                                        <input type="number" id="taxRate" min="0" max="50" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -1873,7 +2199,7 @@
                                             <p>Receive email alerts for new bookings</p>
                                         </div>
                                         <label class="toggle-switch">
-                                            <input type="checkbox" id="emailNotifications" checked>
+                                            <input type="checkbox" id="emailNotifications">
                                             <span class="toggle-slider"></span>
                                         </label>
                                     </div>
@@ -1893,7 +2219,7 @@
                                             <p>Automatically assign available rooms</p>
                                         </div>
                                         <label class="toggle-switch">
-                                            <input type="checkbox" id="autoAssignRooms" checked>
+                                            <input type="checkbox" id="autoAssignRooms">
                                             <span class="toggle-slider"></span>
                                         </label>
                                     </div>
@@ -1909,16 +2235,20 @@
                                     </div>
                                 </div>
                                 
+                                <div class="settings-section" id="userManagementSection">
+                                    <!-- User Management will be loaded here for admin -->
+                                </div>
+                                
                                 <div class="settings-section">
                                     <h4>Backup & Reset</h4>
                                     <div class="form-group">
-                                        <button class="btn btn-primary" onclick="exportData()" style="width: 100%; margin-bottom: 10px;">
+                                        <button class="btn btn-primary" onclick="exportAllData()" style="width: 100%; margin-bottom: 10px;">
                                             <i class="fas fa-download"></i> Export All Data
                                         </button>
-                                        <button class="btn btn-secondary" onclick="importData()" style="width: 100%; margin-bottom: 10px;">
+                                        <button class="btn btn-secondary" onclick="importAllData()" style="width: 100%; margin-bottom: 10px;">
                                             <i class="fas fa-upload"></i> Import Data
                                         </button>
-                                        <button class="btn btn-danger" onclick="resetData()" style="width: 100%;">
+                                        <button class="btn btn-danger" onclick="resetAllData()" style="width: 100%;">
                                             <i class="fas fa-trash"></i> Reset All Data
                                         </button>
                                     </div>
@@ -1976,7 +2306,7 @@
                         </div>
                         <div class="form-group">
                             <label for="modalRoomType">Room Type *</label>
-                            <select id="modalRoomType" required>
+                            <select id="modalRoomType" required onchange="updateBookingSummary()">
                                 <option value="">Select room type</option>
                                 <option value="Standard">Standard ($100/night)</option>
                                 <option value="Deluxe">Deluxe ($150/night)</option>
@@ -2029,7 +2359,7 @@
                                 <span id="summarySubtotal">$0</span>
                             </div>
                             <div class="summary-item">
-                                <span>Tax (10%):</span>
+                                <span>Tax (<span id="summaryTaxRate">10</span>%):</span>
                                 <span id="summaryTax">$0</span>
                             </div>
                             <div class="summary-item total">
@@ -2297,6 +2627,145 @@
         </div>
     </div>
 
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Create New User Account</h3>
+                <button class="close-modal" onclick="closeModal('registerModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regName">Full Name *</label>
+                            <input type="text" id="regName" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regUsername">Username *</label>
+                            <input type="text" id="regUsername" placeholder="Choose username" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regEmail">Email *</label>
+                            <input type="email" id="regEmail" placeholder="user@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPhone">Phone Number</label>
+                            <input type="tel" id="regPhone" placeholder="+1-555-123-4567">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regPassword">Password *</label>
+                            <input type="password" id="regPassword" placeholder="Enter password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regConfirmPassword">Confirm Password *</label>
+                            <input type="password" id="regConfirmPassword" placeholder="Confirm password" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="regRole">Role *</label>
+                            <select id="regRole" required>
+                                <option value="staff">Staff</option>
+                                <option value="manager">Manager</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="regHotelId">Hotel ID</label>
+                            <input type="number" id="regHotelId" value="1" readonly>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('registerModal')">Cancel</button>
+                <button class="btn btn-primary" onclick="registerUser()">Create User</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div id="editUserModal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Edit User Account</h3>
+                <button class="close-modal" onclick="closeModal('editUserModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editUserForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editName">Full Name *</label>
+                            <input type="text" id="editName" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editUsername">Username *</label>
+                            <input type="text" id="editUsername" placeholder="Username" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editEmail">Email *</label>
+                            <input type="email" id="editEmail" placeholder="user@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editPhone">Phone Number</label>
+                            <input type="tel" id="editPhone" placeholder="+1-555-123-4567">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editRole">Role *</label>
+                            <select id="editRole" required>
+                                <option value="staff">Staff</option>
+                                <option value="manager">Manager</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editStatus">Status</label>
+                            <select id="editStatus">
+                                <option value="true">Active</option>
+                                <option value="false">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editPassword">New Password (leave blank to keep current)</label>
+                            <input type="password" id="editPassword" placeholder="Enter new password">
+                        </div>
+                        <div class="form-group">
+                            <label for="editConfirmPassword">Confirm New Password</label>
+                            <input type="password" id="editConfirmPassword" placeholder="Confirm new password">
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="editUserId">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('editUserModal')">Cancel</button>
+                <button class="btn btn-primary" onclick="updateUser()">Update User</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Notification -->
     <div id="notification" class="notification">
         <div class="notification-content">
@@ -2312,6 +2781,8 @@
         // ====================
         // GLOBAL VARIABLES
         // ====================
+        let currentUser = null;
+        let editingId = null;
         let hotelData = {
             rooms: [],
             bookings: [],
@@ -2319,16 +2790,16 @@
             invoices: [],
             settings: {}
         };
-        
-        let currentUser = null;
-        let editingId = null;
 
         // ====================
         // INITIALIZATION
         // ====================
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize default data if not exists
+            initializeDefaultData();
+            
             // Check if user is logged in
-            const savedUser = localStorage.getItem('hotelUser');
+            const savedUser = localStorage.getItem('currentUser');
             if (savedUser) {
                 currentUser = JSON.parse(savedUser);
                 showApp();
@@ -2342,12 +2813,284 @@
             // Initialize event listeners
             initializeEventListeners();
             
-            // Load data
-            loadData();
-            
-            // Initialize chart
-            initializeChart();
+            // Set default dates in forms
+            setDefaultDates();
         });
+
+        // ====================
+        // USER MANAGEMENT SYSTEM
+        // ====================
+        function initializeDefaultData() {
+            // Initialize users if not exists
+            if (!localStorage.getItem('hotelUsers')) {
+                const defaultUsers = [
+                    {
+                        id: 1,
+                        username: 'admin',
+                        password: 'admin123',
+                        name: 'Admin Manager',
+                        email: 'admin@grandplaza.com',
+                        phone: '+1-555-123-4567',
+                        role: 'admin',
+                        hotelId: 1,
+                        createdAt: new Date().toISOString(),
+                        lastLogin: new Date().toISOString(),
+                        isActive: true
+                    },
+                    {
+                        id: 2,
+                        username: 'manager',
+                        password: 'manager123',
+                        name: 'Hotel Manager',
+                        email: 'manager@grandplaza.com',
+                        phone: '+1-555-123-4568',
+                        role: 'manager',
+                        hotelId: 1,
+                        createdAt: new Date().toISOString(),
+                        lastLogin: new Date().toISOString(),
+                        isActive: true
+                    },
+                    {
+                        id: 3,
+                        username: 'staff',
+                        password: 'staff123',
+                        name: 'Reception Staff',
+                        email: 'staff@grandplaza.com',
+                        phone: '+1-555-123-4569',
+                        role: 'staff',
+                        hotelId: 1,
+                        createdAt: new Date().toISOString(),
+                        lastLogin: new Date().toISOString(),
+                        isActive: true
+                    }
+                ];
+                localStorage.setItem('hotelUsers', JSON.stringify(defaultUsers));
+            }
+            
+            // Initialize user activities if not exists
+            if (!localStorage.getItem('userActivities')) {
+                localStorage.setItem('userActivities', JSON.stringify({}));
+            }
+            
+            // Initialize hotel data for each user
+            const users = JSON.parse(localStorage.getItem('hotelUsers') || '[]');
+            users.forEach(user => {
+                const hotelKey = `hotelData_${user.hotelId}`;
+                if (!localStorage.getItem(hotelKey)) {
+                    initializeHotelData(user.hotelId);
+                }
+            });
+        }
+
+        function initializeHotelData(hotelId) {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const nextWeek = new Date(today);
+            nextWeek.setDate(nextWeek.getDate() + 7);
+            
+            const defaultData = {
+                rooms: [
+                    { 
+                        id: 101, 
+                        type: "Deluxe", 
+                        price: 150, 
+                        status: "available", 
+                        floor: 1, 
+                        capacity: 2, 
+                        amenities: ["wifi", "tv", "ac", "minibar"],
+                        description: "Spacious deluxe room with city view"
+                    },
+                    { 
+                        id: 102, 
+                        type: "Standard", 
+                        price: 100, 
+                        status: "occupied", 
+                        floor: 1, 
+                        capacity: 2, 
+                        amenities: ["wifi", "tv", "ac"],
+                        description: "Comfortable standard room"
+                    },
+                    { 
+                        id: 103, 
+                        type: "Suite", 
+                        price: 250, 
+                        status: "available", 
+                        floor: 1, 
+                        capacity: 3, 
+                        amenities: ["wifi", "tv", "ac", "minibar", "safe", "balcony"],
+                        description: "Luxury suite with balcony and premium amenities"
+                    },
+                    { 
+                        id: 104, 
+                        type: "Standard", 
+                        price: 100, 
+                        status: "maintenance", 
+                        floor: 1, 
+                        capacity: 2, 
+                        amenities: ["wifi", "tv"],
+                        description: "Standard room - under maintenance"
+                    },
+                    { 
+                        id: 105, 
+                        type: "Deluxe", 
+                        price: 150, 
+                        status: "cleaning", 
+                        floor: 1, 
+                        capacity: 2, 
+                        amenities: ["wifi", "tv", "ac", "minibar"],
+                        description: "Deluxe room being cleaned"
+                    },
+                    { 
+                        id: 201, 
+                        type: "Suite", 
+                        price: 250, 
+                        status: "available", 
+                        floor: 2, 
+                        capacity: 3, 
+                        amenities: ["wifi", "tv", "ac", "minibar", "safe"],
+                        description: "Executive suite on 2nd floor"
+                    },
+                    { 
+                        id: 202, 
+                        type: "Deluxe", 
+                        price: 150, 
+                        status: "occupied", 
+                        floor: 2, 
+                        capacity: 2, 
+                        amenities: ["wifi", "tv", "ac", "minibar"],
+                        description: "Deluxe room with garden view"
+                    },
+                    { 
+                        id: 203, 
+                        type: "Standard", 
+                        price: 100, 
+                        status: "available", 
+                        floor: 2, 
+                        capacity: 2, 
+                        amenities: ["wifi", "tv", "ac"],
+                        description: "Standard room with mountain view"
+                    }
+                ],
+                bookings: [
+                    {
+                        id: 1001,
+                        guestId: 2001,
+                        roomId: 102,
+                        checkIn: formatDate(today),
+                        checkOut: formatDate(tomorrow),
+                        status: "confirmed",
+                        totalAmount: 165,
+                        adults: 2,
+                        children: 0,
+                        specialRequests: "Non-smoking room please",
+                        createdBy: 1,
+                        createdAt: new Date().toISOString()
+                    },
+                    {
+                        id: 1002,
+                        guestId: 2002,
+                        roomId: 202,
+                        checkIn: formatDate(today),
+                        checkOut: formatDate(nextWeek),
+                        status: "confirmed",
+                        totalAmount: 1155,
+                        adults: 2,
+                        children: 1,
+                        specialRequests: "Extra bed needed",
+                        createdBy: 2,
+                        createdAt: new Date().toISOString()
+                    }
+                ],
+                guests: [
+                    { 
+                        id: 2001, 
+                        name: "John Smith", 
+                        email: "john@example.com", 
+                        phone: "+1-555-1234", 
+                        nationality: "USA", 
+                        idType: "Passport", 
+                        idNumber: "P12345678", 
+                        address: "123 Main St, New York", 
+                        company: "Tech Corp",
+                        notes: "Regular guest",
+                        createdBy: 1,
+                        createdAt: new Date().toISOString()
+                    },
+                    { 
+                        id: 2002, 
+                        name: "Maria Garcia", 
+                        email: "maria@example.com", 
+                        phone: "+34-555-5678", 
+                        nationality: "Spain", 
+                        idType: "Passport", 
+                        idNumber: "P87654321", 
+                        address: "456 Oak Ave, Madrid", 
+                        company: "Design Studio",
+                        notes: "First time visitor",
+                        createdBy: 2,
+                        createdAt: new Date().toISOString()
+                    },
+                    { 
+                        id: 2003, 
+                        name: "Robert Johnson", 
+                        email: "robert@example.com", 
+                        phone: "+1-555-8765", 
+                        nationality: "USA", 
+                        idType: "Driver License", 
+                        idNumber: "DL987654", 
+                        address: "789 Pine Rd, Chicago", 
+                        company: "Finance Inc",
+                        notes: "VIP guest",
+                        createdBy: 1,
+                        createdAt: new Date().toISOString()
+                    }
+                ],
+                invoices: [
+                    {
+                        id: 5001,
+                        bookingId: 1001,
+                        guestId: 2001,
+                        issueDate: formatDate(today),
+                        dueDate: formatDate(tomorrow),
+                        amount: 165,
+                        status: "paid",
+                        notes: "Paid by credit card",
+                        createdBy: 1,
+                        createdAt: new Date().toISOString()
+                    },
+                    {
+                        id: 5002,
+                        bookingId: 1002,
+                        guestId: 2002,
+                        issueDate: formatDate(today),
+                        dueDate: formatDate(nextWeek),
+                        amount: 1155,
+                        status: "pending",
+                        notes: "Awaiting payment",
+                        createdBy: 2,
+                        createdAt: new Date().toISOString()
+                    }
+                ],
+                settings: {
+                    hotelName: `Grand Plaza Hotel ${hotelId}`,
+                    hotelAddress: `123 Luxury Street, City ${hotelId}`,
+                    hotelPhone: "+1 (555) 123-4567",
+                    hotelEmail: `hotel${hotelId}@grandplaza.com`,
+                    checkinTime: "14:00",
+                    checkoutTime: "12:00",
+                    taxRate: 10,
+                    emailNotifications: true,
+                    smsNotifications: false,
+                    autoAssignRooms: true,
+                    requireDeposit: false,
+                    monthlyTarget: 50000
+                }
+            };
+            
+            localStorage.setItem(`hotelData_${hotelId}`, JSON.stringify(defaultData));
+            return defaultData;
+        }
 
         // ====================
         // AUTHENTICATION
@@ -2356,147 +3099,499 @@
             document.getElementById('loginPage').style.display = 'flex';
             document.getElementById('appContainer').style.display = 'none';
             
+            // Clear form
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            
             // Login form submission
             document.getElementById('loginForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
                 
-                if (username === 'admin' && password === 'admin123') {
-                    currentUser = {
-                        username: username,
-                        name: 'Admin Manager',
-                        email: 'admin@grandplaza.com',
-                        role: 'admin'
-                    };
-                    localStorage.setItem('hotelUser', JSON.stringify(currentUser));
+                if (login(username, password)) {
                     showApp();
-                    showNotification('Login successful! Welcome back.', 'success');
                 } else {
                     showNotification('Invalid username or password', 'error');
                 }
             });
         }
 
+        function login(username, password) {
+            const users = JSON.parse(localStorage.getItem('hotelUsers') || '[]');
+            const user = users.find(u => u.username === username && u.password === password && u.isActive);
+            
+            if (user) {
+                // Update last login time
+                user.lastLogin = new Date().toISOString();
+                localStorage.setItem('hotelUsers', JSON.stringify(users));
+                
+                // Set current user (remove password for security)
+                currentUser = { ...user };
+                delete currentUser.password;
+                
+                // Save user session
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                
+                // Load hotel data
+                loadHotelData(currentUser.hotelId);
+                
+                // Log activity
+                logUserActivity(currentUser.id, 'login', 'Logged into the system');
+                
+                return true;
+            }
+            return false;
+        }
+
         function showApp() {
             document.getElementById('loginPage').style.display = 'none';
             document.getElementById('appContainer').style.display = 'flex';
+            
+            // Update user info
             document.getElementById('loggedInUser').textContent = currentUser.name;
+            document.getElementById('loggedInRole').textContent = currentUser.email;
+            
+            // Update dashboard welcome
+            document.getElementById('welcomeUserName').textContent = currentUser.name;
+            document.getElementById('welcomeUserRole').textContent = currentUser.role.charAt(0).toUpperCase() + currentUser.role.slice(1);
+            document.getElementById('welcomeUserRole').className = `status-badge role-${currentUser.role}`;
+            
+            // Format last login time
+            const lastLogin = new Date(currentUser.lastLogin);
+            document.getElementById('lastLoginTime').textContent = lastLogin.toLocaleString();
             
             // Load dashboard data
             loadDashboardData();
+            
+            // Update UI based on role
+            updateUIForRole();
+            
+            // Initialize chart
+            setTimeout(initializeChart, 100);
         }
 
         function logout() {
             if (confirm('Are you sure you want to logout?')) {
-                localStorage.removeItem('hotelUser');
+                // Log activity
+                if (currentUser) {
+                    logUserActivity(currentUser.id, 'logout', 'Logged out of the system');
+                }
+                
+                // Clear session
+                localStorage.removeItem('currentUser');
                 currentUser = null;
+                
+                // Show login page
                 showLogin();
             }
         }
 
         // ====================
+        // USER REGISTRATION
+        // ====================
+        function showRegisterForm() {
+            // Only admin can create users from app
+            if (currentUser && currentUser.role !== 'admin') {
+                showNotification('Only administrators can create new users', 'error');
+                return;
+            }
+            
+            // Clear form
+            document.getElementById('registerForm').reset();
+            document.getElementById('regHotelId').value = currentUser ? currentUser.hotelId : 1;
+            
+            openModal('registerModal');
+        }
+
+        function registerUser() {
+            const name = document.getElementById('regName').value;
+            const username = document.getElementById('regUsername').value;
+            const email = document.getElementById('regEmail').value;
+            const phone = document.getElementById('regPhone').value;
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regConfirmPassword').value;
+            const role = document.getElementById('regRole').value;
+            const hotelId = parseInt(document.getElementById('regHotelId').value);
+            
+            // Validation
+            if (password !== confirmPassword) {
+                showNotification('Passwords do not match', 'error');
+                return;
+            }
+            
+            if (password.length < 6) {
+                showNotification('Password must be at least 6 characters', 'error');
+                return;
+            }
+            
+            // Check if username already exists
+            const users = JSON.parse(localStorage.getItem('hotelUsers') || '[]');
+            if (users.find(u => u.username === username)) {
+                showNotification('Username already exists', 'error');
+                return;
+            }
+            
+            // Check if email already exists
+            if (users.find(u => u.email === email)) {
+                showNotification('Email already exists', 'error');
+                return;
+            }
+            
+            // Create new user
+            const newUser = {
+                id: users.length > 0 ? Math.max(...users.map(u => u.id)) + 1 : 1,
+                username,
+                name,
+                email,
+                phone,
+                password, // In production, hash the password!
+                role,
+                hotelId,
+                createdAt: new Date().toISOString(),
+                lastLogin: null,
+                isActive: true
+            };
+            
+            // Add user
+            users.push(newUser);
+            localStorage.setItem('hotelUsers', JSON.stringify(users));
+            
+            // Initialize user activities
+            const activities = JSON.parse(localStorage.getItem('userActivities') || '{}');
+            activities[newUser.id] = [];
+            localStorage.setItem('userActivities', JSON.stringify(activities));
+            
+            // Initialize hotel data if not exists
+            const hotelKey = `hotelData_${hotelId}`;
+            if (!localStorage.getItem(hotelKey)) {
+                initializeHotelData(hotelId);
+            }
+            
+            closeModal('registerModal');
+            showNotification(`User ${name} created successfully!`, 'success');
+            
+            // Refresh users table if visible
+            if (document.getElementById('usersTable')) {
+                loadUsersTable();
+            }
+            
+            // Log activity
+            if (currentUser) {
+                logUserActivity(currentUser.id, 'user_created', `Created new user: ${name} (${role})`);
+            }
+        }
+
+        // ====================
+        // USER MANAGEMENT
+        // ====================
+        function loadUsersTable() {
+            const users = JSON.parse(localStorage.getItem('hotelUsers') || '[]');
+            const tbody = document.getElementById('usersTable');
+            
+            if (!tbody) return;
+            
+            tbody.innerHTML = '';
+            
+            if (users.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center;">No users found</td></tr>';
+                return;
+            }
+            
+            users.forEach(user => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${user.name}</td>
+                    <td>${user.username}</td>
+                    <td>${user.email}</td>
+                    <td>
+                        <span class="status-badge role-${user.role}">
+                            ${user.role.charAt(0).toUpperCase() + user.role.slice(1)}
+                        </span>
+                    </td>
+                    <td>
+                        <span class="status-badge ${user.isActive ? 'status-confirmed' : 'status-cancelled'}">
+                            ${user.isActive ? 'Active' : 'Inactive'}
+                        </span>
+                    </td>
+                    <td>${user.createdAt ? new Date(user.createdAt).toLocaleDateString() : 'N/A'}</td>
+                    <td>
+                        <div class="action-buttons-small">
+                            ${currentUser && currentUser.id !== user.id ? `
+                                <button class="action-btn-small edit-btn" onclick="editUser(${user.id})" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="action-btn-small ${user.isActive ? 'delete-btn' : 'success-btn'}" 
+                                        onclick="toggleUserStatus(${user.id})" 
+                                        title="${user.isActive ? 'Deactivate' : 'Activate'}">
+                                    <i class="fas fa-${user.isActive ? 'user-slash' : 'user-check'}"></i>
+                                </button>
+                            ` : '<span class="status-badge status-confirmed">Current</span>'}
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function editUser(userId) {
+            const users = JSON.parse(localStorage.getItem('hotelUsers') || '[]');
+            const user = users.find(u => u.id === userId);
+            
+            if (!user) return;
+            
+            // Populate form
+            document.getElementById('editName').value = user.name;
+            document.getElementById('editUsername').value = user.username;
+            document.getElementById('editEmail').value = user.email;
+            document.getElementById('editPhone').value = user.phone || '';
+            document.getElementById('editRole').value = user.role;
+            document.getElementById('editStatus').value = user.isActive.toString();
+            document.getElementById('editUserId').value = user.id;
+            
+            // Clear password fields
+            document.getElementById('editPassword').value = '';
+            document.getElementById('editConfirmPassword').value = '';
+            
+            openModal('editUserModal');
+        }
+
+        function updateUser() {
+            const userId = parseInt(document.getElementById('editUserId').value);
+            const name = document.getElementById('editName').value;
+            const username = document.getElementById('editUsername').value;
+            const email = document.getElementById('editEmail').value;
+            const phone = document.getElementById('editPhone').value;
+            const role = document.getElementById('editRole').value;
+            const isActive = document.getElementById('editStatus').value === 'true';
+            const password = document.getElementById('editPassword').value;
+            const confirmPassword = document.getElementById('editConfirmPassword').value;
+            
+            // Validate passwords if provided
+            if (password && password !== confirmPassword) {
+                showNotification('Passwords do not match', 'error');
+                return;
+            }
+            
+            if (password && password.length < 6) {
+                showNotification('Password must be at least 6 characters', 'error');
+                return;
+            }
+            
+            const users = JSON.parse(localStorage.getItem('hotelUsers') || '[]');
+            const userIndex = users.findIndex(u => u.id === userId);
+            
+            if (userIndex !== -1) {
+                // Check if username already exists (excluding current user)
+                if (users.some(u => u.id !== userId && u.username === username)) {
+                    showNotification('Username already exists', 'error');
+                    return;
+                }
+                
+                // Check if email already exists (excluding current user)
+                if (users.some(u => u.id !== userId && u.email === email)) {
+                    showNotification('Email already exists', 'error');
+                    return;
+                }
+                
+                // Update user
+                users[userIndex].name = name;
+                users[userIndex].username = username;
+                users[userIndex].email = email;
+                users[userIndex].phone = phone;
+                users[userIndex].role = role;
+                users[userIndex].isActive = isActive;
+                
+                // Update password if provided
+                if (password) {
+                    users[userIndex].password = password;
+                }
+                
+                localStorage.setItem('hotelUsers', JSON.stringify(users));
+                
+                // If current user is editing themselves, update session
+                if (currentUser && currentUser.id === userId) {
+                    currentUser = { ...users[userIndex] };
+                    delete currentUser.password;
+                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                    updateUIForRole();
+                    
+                    // Update displayed user info
+                    document.getElementById('loggedInUser').textContent = currentUser.name;
+                    document.getElementById('welcomeUserName').textContent = currentUser.name;
+                    document.getElementById('welcomeUserRole').textContent = currentUser.role.charAt(0).toUpperCase() + currentUser.role.slice(1);
+                    document.getElementById('welcomeUserRole').className = `status-badge role-${currentUser.role}`;
+                }
+                
+                closeModal('editUserModal');
+                showNotification('User updated successfully!', 'success');
+                loadUsersTable();
+                
+                // Log activity
+                if (currentUser) {
+                    logUserActivity(currentUser.id, 'user_updated', `Updated user: ${name}`);
+                }
+            }
+        }
+
+        function toggleUserStatus(userId) {
+            if (currentUser.id === userId) {
+                showNotification('Cannot deactivate your own account', 'error');
+                return;
+            }
+            
+            const users = JSON.parse(localStorage.getItem('hotelUsers') || '[]');
+            const userIndex = users.findIndex(u => u.id === userId);
+            
+            if (userIndex !== -1) {
+                const newStatus = !users[userIndex].isActive;
+                users[userIndex].isActive = newStatus;
+                localStorage.setItem('hotelUsers', JSON.stringify(users));
+                
+                showNotification(`User ${newStatus ? 'activated' : 'deactivated'} successfully`, 'success');
+                loadUsersTable();
+                
+                // Log activity
+                if (currentUser) {
+                    logUserActivity(currentUser.id, 'user_status_changed', 
+                        `${newStatus ? 'Activated' : 'Deactivated'} user: ${users[userIndex].name}`);
+                }
+            }
+        }
+
+        // ====================
+        // USER ACTIVITY LOGGING
+        // ====================
+        function logUserActivity(userId, type, description) {
+            const activities = JSON.parse(localStorage.getItem('userActivities') || '{}');
+            
+            if (!activities[userId]) {
+                activities[userId] = [];
+            }
+            
+            const activity = {
+                id: activities[userId].length + 1,
+                type,
+                description,
+                timestamp: new Date().toISOString(),
+                userId
+            };
+            
+            activities[userId].unshift(activity);
+            
+            // Keep only last 100 activities per user
+            if (activities[userId].length > 100) {
+                activities[userId] = activities[userId].slice(0, 100);
+            }
+            
+            localStorage.setItem('userActivities', JSON.stringify(activities));
+            
+            // Update activity log if visible
+            if (document.getElementById('activityLog')) {
+                loadActivityLog();
+            }
+        }
+
+        function loadUserActivities() {
+            if (!currentUser) return [];
+            
+            const activities = JSON.parse(localStorage.getItem('userActivities') || '{}');
+            return activities[currentUser.id] || [];
+        }
+
+        function loadActivityLog() {
+            const activities = loadUserActivities();
+            const container = document.getElementById('activityLog');
+            
+            if (!container) return;
+            
+            container.innerHTML = '';
+            
+            if (activities.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>No activities yet</p></div>';
+                return;
+            }
+            
+            activities.slice(0, 10).forEach(activity => {
+                const item = document.createElement('div');
+                item.className = 'activity-item';
+                
+                let icon = 'fa-info-circle';
+                let iconColor = '#4e73df';
+                
+                switch(activity.type) {
+                    case 'login':
+                        icon = 'fa-sign-in-alt';
+                        iconColor = '#1cc88a';
+                        break;
+                    case 'logout':
+                        icon = 'fa-sign-out-alt';
+                        iconColor = '#e74a3b';
+                        break;
+                    case 'booking_created':
+                        icon = 'fa-calendar-plus';
+                        iconColor = '#4e73df';
+                        break;
+                    case 'booking_updated':
+                        icon = 'fa-calendar-check';
+                        iconColor = '#f6c23e';
+                        break;
+                    case 'guest_created':
+                        icon = 'fa-user-plus';
+                        iconColor = '#1cc88a';
+                        break;
+                    case 'room_created':
+                        icon = 'fa-bed';
+                        iconColor = '#4e73df';
+                        break;
+                    case 'invoice_created':
+                        icon = 'fa-file-invoice';
+                        iconColor = '#f6c23e';
+                        break;
+                    case 'user_created':
+                    case 'user_updated':
+                        icon = 'fa-user-edit';
+                        iconColor = '#f6c23e';
+                        break;
+                }
+                
+                item.innerHTML = `
+                    <div class="activity-icon" style="background-color: ${iconColor}20; color: ${iconColor};">
+                        <i class="fas ${icon}"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h5>${activity.description}</h5>
+                        <p>${new Date(activity.timestamp).toLocaleString()}</p>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+            
+            // Update activity count
+            document.getElementById('userActivityCount').textContent = activities.length;
+        }
+
+        // ====================
         // DATA MANAGEMENT
         // ====================
-        function loadData() {
-            const savedData = localStorage.getItem('hotelData');
+        function loadHotelData(hotelId) {
+            const hotelKey = `hotelData_${hotelId}`;
+            const savedData = localStorage.getItem(hotelKey);
+            
             if (savedData) {
                 hotelData = JSON.parse(savedData);
             } else {
-                // Initialize with sample data
-                initializeSampleData();
+                hotelData = initializeHotelData(hotelId);
             }
             
-            // Load settings
-            const savedSettings = localStorage.getItem('hotelSettings');
-            if (savedSettings) {
-                hotelData.settings = JSON.parse(savedSettings);
-            }
+            return hotelData;
         }
 
-        function saveData() {
-            localStorage.setItem('hotelData', JSON.stringify(hotelData));
-        }
-
-        function saveSettings() {
-            localStorage.setItem('hotelSettings', JSON.stringify(hotelData.settings));
-        }
-
-        function initializeSampleData() {
-            // Sample rooms
-            hotelData.rooms = [
-                { id: 101, type: "Deluxe", price: 150, status: "available", floor: 1, capacity: 2, amenities: ["wifi", "tv", "ac", "minibar"] },
-                { id: 102, type: "Standard", price: 100, status: "occupied", floor: 1, capacity: 2, amenities: ["wifi", "tv", "ac"] },
-                { id: 103, type: "Suite", price: 250, status: "available", floor: 1, capacity: 3, amenities: ["wifi", "tv", "ac", "minibar", "safe", "balcony"] },
-                { id: 104, type: "Standard", price: 100, status: "maintenance", floor: 1, capacity: 2, amenities: ["wifi", "tv"] },
-                { id: 105, type: "Deluxe", price: 150, status: "cleaning", floor: 1, capacity: 2, amenities: ["wifi", "tv", "ac", "minibar"] },
-                { id: 201, type: "Suite", price: 250, status: "available", floor: 2, capacity: 3, amenities: ["wifi", "tv", "ac", "minibar", "safe"] },
-                { id: 202, type: "Deluxe", price: 150, status: "occupied", floor: 2, capacity: 2, amenities: ["wifi", "tv", "ac", "minibar"] },
-                { id: 203, type: "Standard", price: 100, status: "available", floor: 2, capacity: 2, amenities: ["wifi", "tv", "ac"] },
-                { id: 204, type: "Deluxe", price: 150, status: "occupied", floor: 2, capacity: 2, amenities: ["wifi", "tv", "ac", "minibar"] },
-                { id: 205, type: "Standard", price: 100, status: "available", floor: 2, capacity: 2, amenities: ["wifi", "tv"] },
-                { id: 301, type: "Suite", price: 250, status: "occupied", floor: 3, capacity: 4, amenities: ["wifi", "tv", "ac", "minibar", "safe", "balcony"] },
-                { id: 302, type: "Deluxe", price: 150, status: "available", floor: 3, capacity: 2, amenities: ["wifi", "tv", "ac", "minibar"] },
-                { id: 303, type: "Suite", price: 250, status: "maintenance", floor: 3, capacity: 3, amenities: ["wifi", "tv", "ac", "minibar", "safe"] },
-                { id: 304, type: "Standard", price: 100, status: "available", floor: 3, capacity: 2, amenities: ["wifi", "tv", "ac"] },
-                { id: 305, type: "Deluxe", price: 150, status: "occupied", floor: 3, capacity: 2, amenities: ["wifi", "tv", "ac", "minibar"] }
-            ];
-
-            // Sample guests
-            hotelData.guests = [
-                { id: 2001, name: "John Smith", email: "john@example.com", phone: "+1-555-1234", nationality: "USA", idType: "Passport", idNumber: "P12345678", address: "123 Main St, New York", company: "Tech Corp" },
-                { id: 2002, name: "Maria Garcia", email: "maria@example.com", phone: "+34-555-5678", nationality: "Spain", idType: "Passport", idNumber: "P87654321", address: "456 Oak Ave, Madrid", company: "Design Studio" },
-                { id: 2003, name: "Robert Johnson", email: "robert@example.com", phone: "+1-555-8765", nationality: "USA", idType: "Driver License", idNumber: "DL987654", address: "789 Pine Rd, Chicago", company: "Finance Inc" },
-                { id: 2004, name: "Emma Wilson", email: "emma@example.com", phone: "+44-555-4321", nationality: "UK", idType: "Passport", idNumber: "P55566677", address: "321 Elm St, London", company: "Marketing Ltd" },
-                { id: 2005, name: "David Brown", email: "david@example.com", phone: "+1-555-9999", nationality: "Canada", idType: "Passport", idNumber: "P11122233", address: "654 Maple Dr, Toronto", company: "Consulting Group" },
-                { id: 2006, name: "Sophia Chen", email: "sophia@example.com", phone: "+86-555-8888", nationality: "China", idType: "ID Card", idNumber: "ID44556677", address: "987 Birch Ln, Beijing", company: "Tech Solutions" },
-                { id: 2007, name: "James Miller", email: "james@example.com", phone: "+61-555-7777", nationality: "Australia", idType: "Passport", idNumber: "P88899900", address: "147 Cedar Ave, Sydney", company: "Travel Agency" }
-            ];
-
-            // Sample bookings
-            const today = new Date();
-            const tomorrow = new Date(today);
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            const nextWeek = new Date(today);
-            nextWeek.setDate(nextWeek.getDate() + 7);
+        function saveHotelData() {
+            if (!currentUser) return;
             
-            hotelData.bookings = [
-                { id: 1001, guestId: 2001, roomId: 102, checkIn: formatDate(today), checkOut: formatDate(tomorrow), status: "confirmed", totalAmount: 300, adults: 2, children: 0, specialRequests: "Non-smoking room please" },
-                { id: 1002, guestId: 2002, roomId: 202, checkIn: formatDate(today), checkOut: formatDate(nextWeek), status: "confirmed", totalAmount: 1050, adults: 2, children: 1, specialRequests: "Extra bed needed" },
-                { id: 1003, guestId: 2003, roomId: 204, checkIn: formatDate(yesterday()), checkOut: formatDate(today), status: "confirmed", totalAmount: 150, adults: 1, children: 0 },
-                { id: 1004, guestId: 2004, roomId: 301, checkIn: formatDate(yesterday()), checkOut: formatDate(nextWeek), status: "confirmed", totalAmount: 1750, adults: 2, children: 2, specialRequests: "Connecting rooms if possible" },
-                { id: 1005, guestId: 2005, roomId: 305, checkIn: formatDate(tomorrow), checkOut: formatDate(nextWeek), status: "pending", totalAmount: 900, adults: 2, children: 0 },
-                { id: 1006, guestId: 2006, roomId: 103, checkIn: formatDate(tomorrow), checkOut: formatDate(addDays(tomorrow, 5)), status: "confirmed", totalAmount: 1250, adults: 3, children: 0 },
-                { id: 1007, guestId: 2007, roomId: 203, checkIn: formatDate(yesterday()), checkOut: formatDate(today), status: "cancelled", totalAmount: 100, adults: 1, children: 0 }
-            ];
-
-            // Sample invoices
-            hotelData.invoices = [
-                { id: 5001, bookingId: 1001, guestId: 2001, issueDate: formatDate(today), dueDate: formatDate(tomorrow), amount: 330, status: "paid", notes: "Paid by credit card" },
-                { id: 5002, bookingId: 1002, guestId: 2002, issueDate: formatDate(today), dueDate: formatDate(nextWeek), amount: 1155, status: "paid", notes: "Paid by bank transfer" },
-                { id: 5003, bookingId: 1003, guestId: 2003, issueDate: formatDate(yesterday()), dueDate: formatDate(today), amount: 165, status: "paid", notes: "Paid in cash" },
-                { id: 5004, bookingId: 1004, guestId: 2004, issueDate: formatDate(yesterday()), dueDate: formatDate(nextWeek), amount: 1925, status: "pending", notes: "Awaiting payment" },
-                { id: 5005, bookingId: 1005, guestId: 2005, issueDate: formatDate(today), dueDate: formatDate(nextWeek), amount: 990, status: "pending", notes: "Deposit required" },
-                { id: 5006, bookingId: 1006, guestId: 2006, issueDate: formatDate(today), dueDate: formatDate(addDays(tomorrow, 5)), amount: 1375, status: "pending", notes: "Payment on check-in" }
-            ];
-
-            // Default settings
-            hotelData.settings = {
-                hotelName: "Grand Plaza Hotel",
-                hotelAddress: "123 Luxury Street, City, Country",
-                hotelPhone: "+1 (555) 123-4567",
-                hotelEmail: "info@grandplaza.com",
-                checkinTime: "14:00",
-                checkoutTime: "12:00",
-                taxRate: 10,
-                emailNotifications: true,
-                smsNotifications: false,
-                autoAssignRooms: true,
-                requireDeposit: false
-            };
-
-            saveData();
-            saveSettings();
+            const hotelKey = `hotelData_${currentUser.hotelId}`;
+            localStorage.setItem(hotelKey, JSON.stringify(hotelData));
         }
 
         // ====================
@@ -2504,8 +3599,28 @@
         // ====================
         function loadDashboardData() {
             // Update stats
+            updateDashboardStats();
+            
+            // Load user-specific stats
+            updateUserStats();
+            
+            // Load recent bookings
+            loadRecentBookings();
+            
+            // Load room status grid
+            loadRoomStatusGrid();
+            
+            // Load revenue summary
+            loadRevenueSummary();
+            
+            // Load activity log
+            loadActivityLog();
+        }
+
+        function updateDashboardStats() {
             const totalRooms = hotelData.rooms.length;
             const occupiedRooms = hotelData.rooms.filter(r => r.status === 'occupied').length;
+            const occupancyRate = totalRooms > 0 ? Math.round((occupiedRooms / totalRooms) * 100) : 0;
             
             const today = formatDate(new Date());
             const checkinsToday = hotelData.bookings.filter(b => b.checkIn === today && b.status === 'confirmed').length;
@@ -2516,20 +3631,52 @@
             document.getElementById('checkinsToday').textContent = checkinsToday;
             document.getElementById('checkoutsToday').textContent = checkoutsToday;
             
-            // Load recent bookings
-            loadRecentBookings();
+            // Update occupancy text
+            const occupiedText = document.querySelector('.stat-card:nth-child(2) .card-change');
+            if (occupiedText) {
+                occupiedText.textContent = `${occupancyRate}% occupancy`;
+                occupiedText.className = occupancyRate > 70 ? 'card-change positive' : 'card-change negative';
+            }
             
-            // Load room status grid
-            loadRoomStatusGrid();
+            // Update check-in/out trends
+            const checkinsText = document.querySelector('.stat-card:nth-child(3) .card-change');
+            if (checkinsText) {
+                checkinsText.textContent = checkinsToday > 5 ? 'Busy day' : 'Normal day';
+                checkinsText.className = checkinsToday > 5 ? 'card-change positive' : 'card-change';
+            }
+            
+            const checkoutsText = document.querySelector('.stat-card:nth-child(4) .card-change');
+            if (checkoutsText) {
+                checkoutsText.textContent = checkoutsToday > 5 ? 'Many departures' : 'Few departures';
+                checkoutsText.className = checkoutsToday > 5 ? 'card-change positive' : 'card-change';
+            }
+        }
+
+        function updateUserStats() {
+            if (!currentUser) return;
+            
+            // Count bookings created by current user
+            const userBookings = hotelData.bookings.filter(b => b.createdBy === currentUser.id).length;
+            const userGuests = hotelData.guests.filter(g => g.createdBy === currentUser.id).length;
+            
+            document.getElementById('userBookingsCount').textContent = userBookings;
+            document.getElementById('userGuestsCount').textContent = userGuests;
         }
 
         function loadRecentBookings() {
             const tbody = document.getElementById('recentBookings');
+            if (!tbody) return;
+            
             tbody.innerHTML = '';
             
             const recentBookings = [...hotelData.bookings]
-                .sort((a, b) => new Date(b.checkIn) - new Date(a.checkIn))
+                .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
                 .slice(0, 5);
+            
+            if (recentBookings.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align: center;">No bookings yet</td></tr>';
+                return;
+            }
             
             recentBookings.forEach(booking => {
                 const guest = hotelData.guests.find(g => g.id === booking.guestId);
@@ -2550,12 +3697,20 @@
 
         function loadRoomStatusGrid() {
             const grid = document.getElementById('roomStatusGrid');
+            if (!grid) return;
+            
             grid.innerHTML = '';
+            
+            if (hotelData.rooms.length === 0) {
+                grid.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; padding: 20px; color: #858796;">No rooms added yet</div>';
+                return;
+            }
             
             hotelData.rooms.forEach(room => {
                 const item = document.createElement('div');
                 item.className = 'room-status-item';
                 item.onclick = () => viewRoomDetails(room.id);
+                item.title = `Click to view ${room.type} room details`;
                 
                 let statusClass = '';
                 switch(room.status) {
@@ -2574,21 +3729,71 @@
             });
         }
 
+        function loadRevenueSummary() {
+            const today = new Date();
+            const todayStr = formatDate(today);
+            const weekAgo = new Date(today);
+            weekAgo.setDate(weekAgo.getDate() - 7);
+            const monthAgo = new Date(today);
+            monthAgo.setMonth(monthAgo.getMonth() - 1);
+            const yearStart = new Date(today.getFullYear(), 0, 1);
+            
+            // Calculate revenues
+            const todayRevenue = hotelData.invoices
+                .filter(i => i.issueDate === todayStr && i.status === 'paid')
+                .reduce((sum, invoice) => sum + invoice.amount, 0);
+            
+            const weekRevenue = hotelData.invoices
+                .filter(i => new Date(i.issueDate) >= weekAgo && i.status === 'paid')
+                .reduce((sum, invoice) => sum + invoice.amount, 0);
+            
+            const monthRevenue = hotelData.invoices
+                .filter(i => new Date(i.issueDate) >= monthAgo && i.status === 'paid')
+                .reduce((sum, invoice) => sum + invoice.amount, 0);
+            
+            const ytdRevenue = hotelData.invoices
+                .filter(i => new Date(i.issueDate) >= yearStart && i.status === 'paid')
+                .reduce((sum, invoice) => sum + invoice.amount, 0);
+            
+            // Update display
+            document.getElementById('todayRevenue').textContent = `$${todayRevenue.toFixed(2)}`;
+            document.getElementById('weekRevenue').textContent = `$${weekRevenue.toFixed(2)}`;
+            document.getElementById('monthRevenue').textContent = `$${monthRevenue.toFixed(2)}`;
+            document.getElementById('ytdRevenue').textContent = `$${ytdRevenue.toFixed(2)}`;
+            
+            // Update progress bar
+            const monthlyTarget = hotelData.settings.monthlyTarget || 50000;
+            const progressPercent = Math.min(Math.round((monthRevenue / monthlyTarget) * 100), 100);
+            
+            document.getElementById('revenueProgress').style.width = `${progressPercent}%`;
+            document.getElementById('revenueProgressText').textContent = 
+                `${progressPercent}% ($${monthRevenue.toFixed(2)} / $${monthlyTarget.toFixed(2)})`;
+        }
+
         function initializeChart() {
-            const ctx = document.getElementById('occupancyChart').getContext('2d');
-            const chart = new Chart(ctx, {
+            const ctx = document.getElementById('occupancyChart');
+            if (!ctx) return;
+            
+            // Destroy existing chart if any
+            if (window.occupancyChart) {
+                window.occupancyChart.destroy();
+            }
+            
+            const chartData = {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Occupancy Rate (%)',
+                    data: [65, 70, 75, 80, 85, 90, 85],
+                    borderColor: '#4e73df',
+                    backgroundColor: 'rgba(78, 115, 223, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            };
+            
+            window.occupancyChart = new Chart(ctx, {
                 type: 'line',
-                data: {
-                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-                    datasets: [{
-                        label: 'Occupancy Rate (%)',
-                        data: [65, 70, 75, 80, 85, 90, 85],
-                        borderColor: '#4e73df',
-                        backgroundColor: 'rgba(78, 115, 223, 0.1)',
-                        tension: 0.4,
-                        fill: true
-                    }]
-                },
+                data: chartData,
                 options: {
                     responsive: true,
                     plugins: {
@@ -2613,26 +3818,83 @@
             // Update chart when period changes
             document.getElementById('chartPeriod').addEventListener('change', function() {
                 const period = this.value;
-                let data;
+                let data, labels;
                 
                 switch(period) {
                     case 'week':
                         data = [65, 70, 75, 80, 85, 90, 85];
-                        chart.data.labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+                        labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
                         break;
                     case 'month':
                         data = [65, 68, 72, 75, 78, 82, 85, 80, 78, 75, 72, 70, 68, 65, 70, 75, 80, 85, 90, 85, 80, 75, 70, 65, 70, 75, 80, 85, 90, 95];
-                        chart.data.labels = Array.from({length: 30}, (_, i) => `Day ${i + 1}`);
+                        labels = Array.from({length: 30}, (_, i) => `Day ${i + 1}`);
                         break;
                     case 'year':
                         data = [65, 68, 72, 75, 78, 82, 85, 90, 85, 80, 75, 70];
-                        chart.data.labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                        labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
                         break;
                 }
                 
-                chart.data.datasets[0].data = data;
-                chart.update();
+                window.occupancyChart.data.labels = labels;
+                window.occupancyChart.data.datasets[0].data = data;
+                window.occupancyChart.update();
             });
+        }
+
+        // ====================
+        // ROLE-BASED PERMISSIONS
+        // ====================
+        function updateUIForRole() {
+            if (!currentUser) return;
+            
+            const isAdmin = currentUser.role === 'admin';
+            const isManager = currentUser.role === 'manager' || isAdmin;
+            
+            // Show/hide User Management tab
+            const usersTab = document.getElementById('usersTab');
+            if (usersTab) {
+                usersTab.style.display = isAdmin ? 'block' : 'none';
+            }
+            
+            // Show/hide User Management in settings
+            const userManagementSection = document.getElementById('userManagementSection');
+            if (userManagementSection) {
+                if (isAdmin) {
+                    userManagementSection.innerHTML = `
+                        <h4>User Management</h4>
+                        <div class="form-group">
+                            <button class="btn btn-primary" onclick="showRegisterForm()" style="width: 100%;">
+                                <i class="fas fa-user-plus"></i> Add New User
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-secondary" onclick="switchTab('users')" style="width: 100%;">
+                                <i class="fas fa-users-cog"></i> Manage Users
+                            </button>
+                        </div>
+                    `;
+                } else {
+                    userManagementSection.innerHTML = '';
+                }
+            }
+            
+            // Hide Reset Data button from non-admin users
+            const resetBtn = document.querySelector('button[onclick="resetAllData()"]');
+            if (resetBtn) {
+                resetBtn.style.display = isAdmin ? 'block' : 'none';
+            }
+        }
+
+        function checkPermission(requiredRole) {
+            if (!currentUser) return false;
+            
+            const rolesHierarchy = {
+                'staff': 1,
+                'manager': 2,
+                'admin': 3
+            };
+            
+            return rolesHierarchy[currentUser.role] >= rolesHierarchy[requiredRole];
         }
 
         // ====================
@@ -2640,7 +3902,14 @@
         // ====================
         function loadBookingsTable() {
             const tbody = document.getElementById('bookingsTable');
+            if (!tbody) return;
+            
             tbody.innerHTML = '';
+            
+            if (hotelData.bookings.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center;">No bookings yet</td></tr>';
+                return;
+            }
             
             hotelData.bookings.forEach(booking => {
                 const guest = hotelData.guests.find(g => g.id === booking.guestId);
@@ -2658,15 +3927,19 @@
                         <td><span class="status-badge status-${booking.status}">${booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}</span></td>
                         <td>
                             <div class="action-buttons-small">
-                                <button class="action-btn-small view-btn" onclick="viewBooking(${booking.id})" title="View">
+                                <button class="action-btn-small view-btn" onclick="viewBooking(${booking.id})" title="View Details">
                                     <i class="fas fa-eye"></i>
                                 </button>
-                                <button class="action-btn-small edit-btn" onclick="editBooking(${booking.id})" title="Edit">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                                <button class="action-btn-small delete-btn" onclick="deleteBooking(${booking.id})" title="Delete">
-                                    <i class="fas fa-trash"></i>
-                                </button>
+                                ${checkPermission('manager') ? `
+                                    <button class="action-btn-small edit-btn" onclick="editBooking(${booking.id})" title="Edit Booking">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                ` : ''}
+                                ${checkPermission('admin') ? `
+                                    <button class="action-btn-small delete-btn" onclick="deleteBooking(${booking.id})" title="Delete Booking">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                ` : ''}
                             </div>
                         </td>
                     `;
@@ -2679,11 +3952,17 @@
             editingId = null;
             document.getElementById('modalBookingTitle').textContent = 'New Booking';
             document.getElementById('bookingForm').reset();
-            document.getElementById('modalCheckIn').value = formatDate(new Date());
             
-            const tomorrow = new Date();
+            // Set default dates
+            const today = new Date();
+            const tomorrow = new Date(today);
             tomorrow.setDate(tomorrow.getDate() + 1);
+            
+            document.getElementById('modalCheckIn').value = formatDate(today);
             document.getElementById('modalCheckOut').value = formatDate(tomorrow);
+            
+            // Set tax rate from settings
+            document.getElementById('summaryTaxRate').textContent = hotelData.settings.taxRate || 10;
             
             updateBookingSummary();
             openModal('bookingModal');
@@ -2694,7 +3973,10 @@
             const checkIn = document.getElementById('modalCheckIn').value;
             const checkOut = document.getElementById('modalCheckOut').value;
             
-            if (!roomType || !checkIn || !checkOut) return;
+            if (!roomType || !checkIn || !checkOut) {
+                resetBookingSummary();
+                return;
+            }
             
             let roomPrice = 0;
             switch(roomType) {
@@ -2704,17 +3986,31 @@
             }
             
             const nights = calculateNights(checkIn, checkOut);
-            if (nights <= 0) return;
+            if (nights <= 0) {
+                resetBookingSummary();
+                showNotification('Check-out date must be after check-in date', 'warning');
+                return;
+            }
             
+            const taxRate = hotelData.settings.taxRate || 10;
             const subtotal = roomPrice * nights;
-            const tax = subtotal * 0.10;
+            const tax = subtotal * (taxRate / 100);
             const total = subtotal + tax;
             
             document.getElementById('summaryRoomRate').textContent = `$${roomPrice}`;
             document.getElementById('summaryNights').textContent = nights;
             document.getElementById('summarySubtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('summaryTaxRate').textContent = taxRate;
             document.getElementById('summaryTax').textContent = `$${tax.toFixed(2)}`;
             document.getElementById('summaryTotal').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function resetBookingSummary() {
+            document.getElementById('summaryRoomRate').textContent = '$0';
+            document.getElementById('summaryNights').textContent = '0';
+            document.getElementById('summarySubtotal').textContent = '$0';
+            document.getElementById('summaryTax').textContent = '$0';
+            document.getElementById('summaryTotal').textContent = '$0';
         }
 
         function saveBooking() {
@@ -2734,13 +4030,19 @@
                 return;
             }
             
-            // Find available room
+            const nights = calculateNights(checkIn, checkOut);
+            if (nights <= 0) {
+                showNotification('Check-out date must be after check-in date', 'error');
+                return;
+            }
+            
+            // Find available room of the selected type
             const availableRoom = hotelData.rooms.find(room => 
                 room.type === roomType && room.status === 'available'
             );
             
             if (!availableRoom) {
-                showNotification(`No available ${roomType} rooms`, 'error');
+                showNotification(`No available ${roomType} rooms. Please try a different room type.`, 'error');
                 return;
             }
             
@@ -2760,9 +4062,14 @@
                     idNumber: '',
                     address: '',
                     company: '',
-                    notes: ''
+                    notes: '',
+                    createdBy: currentUser.id,
+                    createdAt: new Date().toISOString()
                 };
                 hotelData.guests.push(guest);
+                
+                // Log activity
+                logUserActivity(currentUser.id, 'guest_created', `Added new guest: ${guestName}`);
             }
             
             // Calculate amount
@@ -2773,20 +4080,22 @@
                 case 'Suite': roomPrice = 250; break;
             }
             
-            const nights = calculateNights(checkIn, checkOut);
+            const taxRate = hotelData.settings.taxRate || 10;
             const subtotal = roomPrice * nights;
-            const totalAmount = subtotal * 1.10; // Including tax
+            const totalAmount = subtotal + (subtotal * (taxRate / 100));
             
             if (editingId) {
                 // Update existing booking
-                const booking = hotelData.bookings.find(b => b.id === editingId);
-                if (booking) {
+                const bookingIndex = hotelData.bookings.findIndex(b => b.id === editingId);
+                if (bookingIndex !== -1) {
                     // Free previous room
-                    const prevRoom = hotelData.rooms.find(r => r.id === booking.roomId);
+                    const prevBooking = hotelData.bookings[bookingIndex];
+                    const prevRoom = hotelData.rooms.find(r => r.id === prevBooking.roomId);
                     if (prevRoom) prevRoom.status = 'available';
                     
                     // Update booking
-                    Object.assign(booking, {
+                    hotelData.bookings[bookingIndex] = {
+                        ...hotelData.bookings[bookingIndex],
                         guestId: guest.id,
                         roomId: availableRoom.id,
                         checkIn,
@@ -2794,8 +4103,10 @@
                         totalAmount,
                         adults: parseInt(adults),
                         children: parseInt(children),
-                        specialRequests
-                    });
+                        specialRequests,
+                        updatedBy: currentUser.id,
+                        updatedAt: new Date().toISOString()
+                    };
                 }
             } else {
                 // Create new booking
@@ -2812,7 +4123,9 @@
                     totalAmount,
                     adults: parseInt(adults),
                     children: parseInt(children),
-                    specialRequests
+                    specialRequests,
+                    createdBy: currentUser.id,
+                    createdAt: new Date().toISOString()
                 });
             }
             
@@ -2831,28 +4144,35 @@
                 dueDate: checkOut,
                 amount: totalAmount,
                 status: 'pending',
-                notes: ''
+                notes: specialRequests || '',
+                createdBy: currentUser.id,
+                createdAt: new Date().toISOString()
             });
             
-            saveData();
+            saveHotelData();
             closeModal('bookingModal');
             showNotification(editingId ? 'Booking updated successfully!' : 'Booking created successfully!', 'success');
             
-            // Refresh tables
-            loadBookingsTable();
-            loadDashboardData();
+            // Log activity
+            logUserActivity(currentUser.id, editingId ? 'booking_updated' : 'booking_created', 
+                editingId ? `Updated booking #${editingId}` : `Created booking for ${guestName}`);
             
-            if (document.getElementById('guestsTable')) {
-                loadGuestsTable();
-            }
-            if (document.getElementById('invoicesTable')) {
-                loadInvoicesTable();
-            }
+            // Refresh all data
+            loadDashboardData();
+            loadBookingsTable();
+            loadGuestsTable();
+            loadInvoicesTable();
+            
+            // Switch to bookings tab if not already there
+            switchTab('booking');
         }
 
         function viewBooking(id) {
             const booking = hotelData.bookings.find(b => b.id === id);
-            if (!booking) return;
+            if (!booking) {
+                showNotification('Booking not found', 'error');
+                return;
+            }
             
             const guest = hotelData.guests.find(g => g.id === booking.guestId);
             const room = hotelData.rooms.find(r => r.id === booking.roomId);
@@ -2864,25 +4184,36 @@
             details += `<p><strong>Check-out:</strong> ${formatDisplayDate(booking.checkOut)}</p>`;
             details += `<p><strong>Status:</strong> <span class="status-badge status-${booking.status}">${booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}</span></p>`;
             details += `<p><strong>Total Amount:</strong> $${booking.totalAmount?.toFixed(2) || '0.00'}</p>`;
+            details += `<p><strong>Guests:</strong> ${booking.adults || 2} adults, ${booking.children || 0} children</p>`;
             
             if (booking.specialRequests) {
                 details += `<p><strong>Special Requests:</strong> ${booking.specialRequests}</p>`;
             }
+            
+            details += `<p><strong>Created:</strong> ${booking.createdAt ? new Date(booking.createdAt).toLocaleString() : 'N/A'}</p>`;
             
             showNotification(details, 'info');
         }
 
         function editBooking(id) {
             const booking = hotelData.bookings.find(b => b.id === id);
-            if (!booking) return;
+            if (!booking) {
+                showNotification('Booking not found', 'error');
+                return;
+            }
             
             const guest = hotelData.guests.find(g => g.id === booking.guestId);
             const room = hotelData.rooms.find(r => r.id === booking.roomId);
             
-            if (!guest || !room) return;
+            if (!guest || !room) {
+                showNotification('Guest or room information not found', 'error');
+                return;
+            }
             
             editingId = id;
             document.getElementById('modalBookingTitle').textContent = 'Edit Booking';
+            
+            // Fill form
             document.getElementById('modalGuestName').value = guest.name;
             document.getElementById('modalGuestEmail').value = guest.email;
             document.getElementById('modalGuestPhone').value = guest.phone;
@@ -2893,38 +4224,51 @@
             document.getElementById('modalChildren').value = booking.children || 0;
             document.getElementById('modalSpecialRequests').value = booking.specialRequests || '';
             
+            // Set tax rate from settings
+            document.getElementById('summaryTaxRate').textContent = hotelData.settings.taxRate || 10;
+            
             updateBookingSummary();
             openModal('bookingModal');
         }
 
         function deleteBooking(id) {
-            if (confirm('Are you sure you want to delete this booking?')) {
-                const bookingIndex = hotelData.bookings.findIndex(b => b.id === id);
-                if (bookingIndex !== -1) {
-                    // Free the room
-                    const booking = hotelData.bookings[bookingIndex];
-                    const room = hotelData.rooms.find(r => r.id === booking.roomId);
-                    if (room) room.status = 'available';
-                    
-                    // Remove booking
-                    hotelData.bookings.splice(bookingIndex, 1);
-                    
-                    // Remove associated invoice
-                    const invoiceIndex = hotelData.invoices.findIndex(i => i.bookingId === id);
-                    if (invoiceIndex !== -1) {
-                        hotelData.invoices.splice(invoiceIndex, 1);
-                    }
-                    
-                    saveData();
-                    showNotification('Booking deleted successfully!', 'success');
-                    loadBookingsTable();
-                    loadDashboardData();
-                    
-                    if (document.getElementById('invoicesTable')) {
-                        loadInvoicesTable();
-                    }
-                }
+            if (!confirm('Are you sure you want to delete this booking? This action cannot be undone.')) {
+                return;
             }
+            
+            const bookingIndex = hotelData.bookings.findIndex(b => b.id === id);
+            if (bookingIndex === -1) {
+                showNotification('Booking not found', 'error');
+                return;
+            }
+            
+            const booking = hotelData.bookings[bookingIndex];
+            
+            // Free the room
+            const room = hotelData.rooms.find(r => r.id === booking.roomId);
+            if (room) {
+                room.status = 'available';
+            }
+            
+            // Remove booking
+            hotelData.bookings.splice(bookingIndex, 1);
+            
+            // Remove associated invoice
+            const invoiceIndex = hotelData.invoices.findIndex(i => i.bookingId === id);
+            if (invoiceIndex !== -1) {
+                hotelData.invoices.splice(invoiceIndex, 1);
+            }
+            
+            saveHotelData();
+            showNotification('Booking deleted successfully!', 'success');
+            
+            // Log activity
+            logUserActivity(currentUser.id, 'booking_deleted', `Deleted booking #${id}`);
+            
+            // Refresh data
+            loadDashboardData();
+            loadBookingsTable();
+            loadInvoicesTable();
         }
 
         // ====================
@@ -2932,7 +4276,14 @@
         // ====================
         function loadRoomsTable() {
             const tbody = document.getElementById('roomsTable');
+            if (!tbody) return;
+            
             tbody.innerHTML = '';
+            
+            if (hotelData.rooms.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center;">No rooms added yet</td></tr>';
+                return;
+            }
             
             hotelData.rooms.forEach(room => {
                 const row = document.createElement('tr');
@@ -2945,12 +4296,19 @@
                     <td>${room.amenities ? room.amenities.slice(0, 3).join(', ') : ''}${room.amenities && room.amenities.length > 3 ? '...' : ''}</td>
                     <td>
                         <div class="action-buttons-small">
-                            <button class="action-btn-small edit-btn" onclick="editRoom(${room.id})" title="Edit">
-                                <i class="fas fa-edit"></i>
+                            <button class="action-btn-small view-btn" onclick="viewRoomDetails(${room.id})" title="View Details">
+                                <i class="fas fa-eye"></i>
                             </button>
-                            <button class="action-btn-small delete-btn" onclick="deleteRoom(${room.id})" title="Delete">
-                                <i class="fas fa-trash"></i>
-                            </button>
+                            ${checkPermission('manager') ? `
+                                <button class="action-btn-small edit-btn" onclick="editRoom(${room.id})" title="Edit Room">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            ` : ''}
+                            ${checkPermission('admin') ? `
+                                <button class="action-btn-small delete-btn" onclick="deleteRoom(${room.id})" title="Delete Room">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            ` : ''}
                         </div>
                     </td>
                 `;
@@ -3000,17 +4358,30 @@
                 return;
             }
             
-            // Check if room number already exists (for new rooms)
-            if (!editingId && hotelData.rooms.find(r => r.id === roomNumber)) {
-                showNotification(`Room ${roomNumber} already exists`, 'error');
+            if (roomNumber < 100 || roomNumber > 999) {
+                showNotification('Room number must be between 100 and 999', 'error');
                 return;
+            }
+            
+            if (price < 50) {
+                showNotification('Price must be at least $50', 'error');
+                return;
+            }
+            
+            // Check if room number already exists (for new rooms)
+            if (!editingId) {
+                if (hotelData.rooms.find(r => r.id === roomNumber)) {
+                    showNotification(`Room ${roomNumber} already exists`, 'error');
+                    return;
+                }
             }
             
             if (editingId) {
                 // Update existing room
-                const room = hotelData.rooms.find(r => r.id === editingId);
-                if (room) {
-                    Object.assign(room, {
+                const roomIndex = hotelData.rooms.findIndex(r => r.id === editingId);
+                if (roomIndex !== -1) {
+                    hotelData.rooms[roomIndex] = {
+                        ...hotelData.rooms[roomIndex],
                         id: roomNumber,
                         type: roomType,
                         price: price,
@@ -3019,7 +4390,7 @@
                         capacity: parseInt(capacity),
                         amenities: amenities,
                         description: description
-                    });
+                    };
                 }
             } else {
                 // Create new room
@@ -3031,25 +4402,39 @@
                     floor: parseInt(floor),
                     capacity: parseInt(capacity),
                     amenities: amenities,
-                    description: description
+                    description: description,
+                    createdBy: currentUser.id,
+                    createdAt: new Date().toISOString()
                 });
             }
             
-            saveData();
+            saveHotelData();
             closeModal('roomModal');
             showNotification(editingId ? 'Room updated successfully!' : 'Room added successfully!', 'success');
             
-            // Refresh tables
-            loadRoomsTable();
+            // Log activity
+            logUserActivity(currentUser.id, editingId ? 'room_updated' : 'room_created', 
+                editingId ? `Updated room ${roomNumber}` : `Added new room ${roomNumber} (${roomType})`);
+            
+            // Refresh data
             loadDashboardData();
+            loadRoomsTable();
+            
+            // Switch to rooms tab if not already there
+            switchTab('rooms');
         }
 
         function editRoom(id) {
             const room = hotelData.rooms.find(r => r.id === id);
-            if (!room) return;
+            if (!room) {
+                showNotification('Room not found', 'error');
+                return;
+            }
             
             editingId = id;
             document.getElementById('modalRoomTitle').textContent = 'Edit Room';
+            
+            // Fill form
             document.getElementById('roomFormNumber').value = room.id;
             document.getElementById('roomFormFloor').value = room.floor.toString();
             document.getElementById('roomFormType').value = room.type;
@@ -3067,31 +4452,46 @@
         }
 
         function deleteRoom(id) {
-            if (confirm('Are you sure you want to delete this room?')) {
-                // Check if room has active bookings
-                const hasActiveBookings = hotelData.bookings.some(b => 
-                    b.roomId === id && (b.status === 'confirmed' || b.status === 'pending')
-                );
-                
-                if (hasActiveBookings) {
-                    showNotification('Cannot delete room with active bookings', 'error');
-                    return;
-                }
-                
-                const roomIndex = hotelData.rooms.findIndex(r => r.id === id);
-                if (roomIndex !== -1) {
-                    hotelData.rooms.splice(roomIndex, 1);
-                    saveData();
-                    showNotification('Room deleted successfully!', 'success');
-                    loadRoomsTable();
-                    loadDashboardData();
-                }
+            if (!confirm('Are you sure you want to delete this room? This action cannot be undone.')) {
+                return;
             }
+            
+            // Check if room has active bookings
+            const hasActiveBookings = hotelData.bookings.some(b => 
+                b.roomId === id && (b.status === 'confirmed' || b.status === 'pending')
+            );
+            
+            if (hasActiveBookings) {
+                showNotification('Cannot delete room with active bookings', 'error');
+                return;
+            }
+            
+            const roomIndex = hotelData.rooms.findIndex(r => r.id === id);
+            if (roomIndex === -1) {
+                showNotification('Room not found', 'error');
+                return;
+            }
+            
+            const room = hotelData.rooms[roomIndex];
+            hotelData.rooms.splice(roomIndex, 1);
+            saveHotelData();
+            
+            showNotification(`Room ${id} deleted successfully!`, 'success');
+            
+            // Log activity
+            logUserActivity(currentUser.id, 'room_deleted', `Deleted room ${id}`);
+            
+            // Refresh data
+            loadDashboardData();
+            loadRoomsTable();
         }
 
         function viewRoomDetails(id) {
             const room = hotelData.rooms.find(r => r.id === id);
-            if (!room) return;
+            if (!room) {
+                showNotification('Room not found', 'error');
+                return;
+            }
             
             let details = `<h4>Room ${room.id}</h4>`;
             details += `<p><strong>Type:</strong> ${room.type}</p>`;
@@ -3111,7 +4511,7 @@
             // Show current booking if occupied
             if (room.status === 'occupied') {
                 const booking = hotelData.bookings.find(b => 
-                    b.roomId === room.id && b.status === 'confirmed'
+                    b.roomId === room.id && (b.status === 'confirmed' || b.status === 'pending')
                 );
                 if (booking) {
                     const guest = hotelData.guests.find(g => g.id === booking.guestId);
@@ -3130,7 +4530,14 @@
         // ====================
         function loadGuestsTable() {
             const tbody = document.getElementById('guestsTable');
+            if (!tbody) return;
+            
             tbody.innerHTML = '';
+            
+            if (hotelData.guests.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center;">No guests yet</td></tr>';
+                return;
+            }
             
             hotelData.guests.forEach(guest => {
                 const bookings = hotelData.bookings.filter(b => b.guestId === guest.id);
@@ -3145,15 +4552,19 @@
                     <td>${bookings.length}</td>
                     <td>
                         <div class="action-buttons-small">
-                            <button class="action-btn-small view-btn" onclick="viewGuest(${guest.id})" title="View">
+                            <button class="action-btn-small view-btn" onclick="viewGuest(${guest.id})" title="View Details">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <button class="action-btn-small edit-btn" onclick="editGuest(${guest.id})" title="Edit">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="action-btn-small delete-btn" onclick="deleteGuest(${guest.id})" title="Delete">
-                                <i class="fas fa-trash"></i>
-                            </button>
+                            ${checkPermission('manager') ? `
+                                <button class="action-btn-small edit-btn" onclick="editGuest(${guest.id})" title="Edit Guest">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            ` : ''}
+                            ${checkPermission('admin') ? `
+                                <button class="action-btn-small delete-btn" onclick="deleteGuest(${guest.id})" title="Delete Guest">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            ` : ''}
                         </div>
                     </td>
                 `;
@@ -3165,6 +4576,10 @@
             editingId = null;
             document.getElementById('modalGuestTitle').textContent = 'New Guest';
             document.getElementById('guestForm').reset();
+            
+            // Set default ID type
+            document.getElementById('guestFormIdType').value = 'Passport';
+            
             openModal('guestModal');
         }
 
@@ -3185,11 +4600,19 @@
                 return;
             }
             
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Please enter a valid email address', 'error');
+                return;
+            }
+            
             if (editingId) {
                 // Update existing guest
-                const guest = hotelData.guests.find(g => g.id === editingId);
-                if (guest) {
-                    Object.assign(guest, {
+                const guestIndex = hotelData.guests.findIndex(g => g.id === editingId);
+                if (guestIndex !== -1) {
+                    hotelData.guests[guestIndex] = {
+                        ...hotelData.guests[guestIndex],
                         name,
                         email,
                         phone,
@@ -3198,10 +4621,19 @@
                         idNumber,
                         address,
                         company,
-                        notes
-                    });
+                        notes,
+                        updatedBy: currentUser.id,
+                        updatedAt: new Date().toISOString()
+                    };
                 }
             } else {
+                // Check if guest with same email already exists
+                const existingGuest = hotelData.guests.find(g => g.email === email);
+                if (existingGuest) {
+                    showNotification('A guest with this email already exists', 'error');
+                    return;
+                }
+                
                 // Create new guest
                 const guestId = hotelData.guests.length > 0 ? 
                     Math.max(...hotelData.guests.map(g => g.id)) + 1 : 2001;
@@ -3216,19 +4648,34 @@
                     idNumber,
                     address,
                     company,
-                    notes
+                    notes,
+                    createdBy: currentUser.id,
+                    createdAt: new Date().toISOString()
                 });
             }
             
-            saveData();
+            saveHotelData();
             closeModal('guestModal');
             showNotification(editingId ? 'Guest updated successfully!' : 'Guest added successfully!', 'success');
+            
+            // Log activity
+            logUserActivity(currentUser.id, editingId ? 'guest_updated' : 'guest_created', 
+                editingId ? `Updated guest: ${name}` : `Added new guest: ${name}`);
+            
+            // Refresh data
+            loadDashboardData();
             loadGuestsTable();
+            
+            // Switch to guests tab if not already there
+            switchTab('guests');
         }
 
         function viewGuest(id) {
             const guest = hotelData.guests.find(g => g.id === id);
-            if (!guest) return;
+            if (!guest) {
+                showNotification('Guest not found', 'error');
+                return;
+            }
             
             const bookings = hotelData.bookings.filter(b => b.guestId === guest.id);
             
@@ -3244,24 +4691,31 @@
             
             // Show recent bookings
             if (bookings.length > 0) {
-                details += `<p><strong>Recent Bookings:</strong></p><ul>`;
+                details += `<p><strong>Recent Bookings:</strong></p><ul style="margin-left: 20px;">`;
                 bookings.slice(0, 3).forEach(booking => {
                     const room = hotelData.rooms.find(r => r.id === booking.roomId);
-                    details += `<li>Room ${room?.id || 'Unknown'} (${formatDisplayDate(booking.checkIn)} to ${formatDisplayDate(booking.checkOut)})</li>`;
+                    details += `<li>Room ${room?.id || 'Unknown'} (${formatDisplayDate(booking.checkIn)} to ${formatDisplayDate(booking.checkOut)}) - $${booking.totalAmount.toFixed(2)}</li>`;
                 });
                 if (bookings.length > 3) details += `<li>...and ${bookings.length - 3} more</li>`;
                 details += `</ul>`;
             }
+            
+            details += `<p><strong>Member Since:</strong> ${guest.createdAt ? new Date(guest.createdAt).toLocaleDateString() : 'N/A'}</p>`;
             
             showNotification(details, 'info');
         }
 
         function editGuest(id) {
             const guest = hotelData.guests.find(g => g.id === id);
-            if (!guest) return;
+            if (!guest) {
+                showNotification('Guest not found', 'error');
+                return;
+            }
             
             editingId = id;
             document.getElementById('modalGuestTitle').textContent = 'Edit Guest';
+            
+            // Fill form
             document.getElementById('guestFormName').value = guest.name;
             document.getElementById('guestFormEmail').value = guest.email;
             document.getElementById('guestFormPhone').value = guest.phone;
@@ -3276,23 +4730,36 @@
         }
 
         function deleteGuest(id) {
+            if (!confirm('Are you sure you want to delete this guest? This action cannot be undone.')) {
+                return;
+            }
+            
             // Check if guest has bookings
             const hasBookings = hotelData.bookings.some(b => b.guestId === id);
             
             if (hasBookings) {
-                showNotification('Cannot delete guest with existing bookings', 'error');
+                showNotification('Cannot delete guest with existing bookings. Delete the bookings first.', 'error');
                 return;
             }
             
-            if (confirm('Are you sure you want to delete this guest?')) {
-                const guestIndex = hotelData.guests.findIndex(g => g.id === id);
-                if (guestIndex !== -1) {
-                    hotelData.guests.splice(guestIndex, 1);
-                    saveData();
-                    showNotification('Guest deleted successfully!', 'success');
-                    loadGuestsTable();
-                }
+            const guestIndex = hotelData.guests.findIndex(g => g.id === id);
+            if (guestIndex === -1) {
+                showNotification('Guest not found', 'error');
+                return;
             }
+            
+            const guest = hotelData.guests[guestIndex];
+            hotelData.guests.splice(guestIndex, 1);
+            saveHotelData();
+            
+            showNotification(`Guest ${guest.name} deleted successfully!`, 'success');
+            
+            // Log activity
+            logUserActivity(currentUser.id, 'guest_deleted', `Deleted guest: ${guest.name}`);
+            
+            // Refresh data
+            loadDashboardData();
+            loadGuestsTable();
         }
 
         // ====================
@@ -3300,7 +4767,14 @@
         // ====================
         function loadInvoicesTable() {
             const tbody = document.getElementById('invoicesTable');
+            if (!tbody) return;
+            
             tbody.innerHTML = '';
+            
+            if (hotelData.invoices.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center;">No invoices yet</td></tr>';
+                return;
+            }
             
             hotelData.invoices.forEach(invoice => {
                 const guest = hotelData.guests.find(g => g.id === invoice.guestId);
@@ -3317,15 +4791,19 @@
                     <td><span class="status-badge status-${invoice.status}">${invoice.status.charAt(0).toUpperCase() + invoice.status.slice(1)}</span></td>
                     <td>
                         <div class="action-buttons-small">
-                            <button class="action-btn-small view-btn" onclick="viewInvoice(${invoice.id})" title="View">
+                            <button class="action-btn-small view-btn" onclick="viewInvoice(${invoice.id})" title="View Details">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <button class="action-btn-small edit-btn" onclick="editInvoice(${invoice.id})" title="Edit">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="action-btn-small delete-btn" onclick="deleteInvoice(${invoice.id})" title="Delete">
-                                <i class="fas fa-trash"></i>
-                            </button>
+                            ${checkPermission('manager') ? `
+                                <button class="action-btn-small edit-btn" onclick="editInvoice(${invoice.id})" title="Edit Invoice">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            ` : ''}
+                            ${checkPermission('admin') ? `
+                                <button class="action-btn-small delete-btn" onclick="deleteInvoice(${invoice.id})" title="Delete Invoice">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            ` : ''}
                         </div>
                     </td>
                 `;
@@ -3335,7 +4813,6 @@
 
         function createNewInvoice() {
             editingId = null;
-            openModal('invoiceModal');
             
             // Populate guest dropdown
             const guestSelect = document.getElementById('invoiceGuest');
@@ -3355,21 +4832,23 @@
                 if (guest) {
                     const option = document.createElement('option');
                     option.value = booking.id;
-                    option.textContent = `#${booking.id} - ${guest.name}`;
+                    option.textContent = `#${booking.id} - ${guest.name} - $${booking.totalAmount.toFixed(2)}`;
                     bookingSelect.appendChild(option);
                 }
             });
             
             // Set default dates
-            const today = formatDate(new Date());
-            document.getElementById('invoiceIssueDate').value = today;
+            const today = new Date();
+            const dueDate = new Date(today);
+            dueDate.setDate(dueDate.getDate() + 30); // 30 days due date
             
-            const dueDate = new Date();
-            dueDate.setDate(dueDate.getDate() + 7);
+            document.getElementById('invoiceIssueDate').value = formatDate(today);
             document.getElementById('invoiceDueDate').value = formatDate(dueDate);
             
-            // Set default amount
-            document.getElementById('invoiceAmount').value = '0.00';
+            // Clear other fields
+            document.getElementById('invoiceAmount').value = '';
+            document.getElementById('invoiceStatus').value = 'pending';
+            document.getElementById('invoiceNotes').value = '';
             
             // Add event listener to auto-fill amount when booking is selected
             bookingSelect.addEventListener('change', function() {
@@ -3379,6 +4858,8 @@
                     document.getElementById('invoiceAmount').value = booking.totalAmount.toFixed(2);
                 }
             });
+            
+            openModal('invoiceModal');
         }
 
         function saveInvoice() {
@@ -3396,21 +4877,41 @@
                 return;
             }
             
+            if (amount <= 0) {
+                showNotification('Amount must be greater than 0', 'error');
+                return;
+            }
+            
+            if (new Date(dueDate) < new Date(issueDate)) {
+                showNotification('Due date must be after issue date', 'error');
+                return;
+            }
+            
             if (editingId) {
                 // Update existing invoice
-                const invoice = hotelData.invoices.find(i => i.id === editingId);
-                if (invoice) {
-                    Object.assign(invoice, {
+                const invoiceIndex = hotelData.invoices.findIndex(i => i.id === editingId);
+                if (invoiceIndex !== -1) {
+                    hotelData.invoices[invoiceIndex] = {
+                        ...hotelData.invoices[invoiceIndex],
                         guestId,
                         bookingId,
                         issueDate,
                         dueDate,
                         amount,
                         status,
-                        notes
-                    });
+                        notes,
+                        updatedBy: currentUser.id,
+                        updatedAt: new Date().toISOString()
+                    };
                 }
             } else {
+                // Check if invoice for this booking already exists
+                const existingInvoice = hotelData.invoices.find(i => i.bookingId === bookingId);
+                if (existingInvoice) {
+                    showNotification('An invoice for this booking already exists', 'error');
+                    return;
+                }
+                
                 // Create new invoice
                 const invoiceId = hotelData.invoices.length > 0 ? 
                     Math.max(...hotelData.invoices.map(i => i.id)) + 1 : 5001;
@@ -3423,19 +4924,34 @@
                     dueDate,
                     amount,
                     status,
-                    notes
+                    notes,
+                    createdBy: currentUser.id,
+                    createdAt: new Date().toISOString()
                 });
             }
             
-            saveData();
+            saveHotelData();
             closeModal('invoiceModal');
             showNotification(editingId ? 'Invoice updated successfully!' : 'Invoice created successfully!', 'success');
+            
+            // Log activity
+            logUserActivity(currentUser.id, editingId ? 'invoice_updated' : 'invoice_created', 
+                editingId ? `Updated invoice #${editingId}` : `Created invoice for booking #${bookingId}`);
+            
+            // Refresh data
+            loadDashboardData();
             loadInvoicesTable();
+            
+            // Switch to billing tab if not already there
+            switchTab('billing');
         }
 
         function viewInvoice(id) {
             const invoice = hotelData.invoices.find(i => i.id === id);
-            if (!invoice) return;
+            if (!invoice) {
+                showNotification('Invoice not found', 'error');
+                return;
+            }
             
             const guest = hotelData.guests.find(g => g.id === invoice.guestId);
             const booking = hotelData.bookings.find(b => b.id === invoice.bookingId);
@@ -3452,15 +4968,19 @@
                 details += `<p><strong>Notes:</strong> ${invoice.notes}</p>`;
             }
             
+            details += `<p><strong>Created:</strong> ${invoice.createdAt ? new Date(invoice.createdAt).toLocaleString() : 'N/A'}</p>`;
+            
             showNotification(details, 'info');
         }
 
         function editInvoice(id) {
             const invoice = hotelData.invoices.find(i => i.id === id);
-            if (!invoice) return;
+            if (!invoice) {
+                showNotification('Invoice not found', 'error');
+                return;
+            }
             
             editingId = id;
-            openModal('invoiceModal');
             
             // Populate guest dropdown
             const guestSelect = document.getElementById('invoiceGuest');
@@ -3481,30 +5001,54 @@
                 if (guest) {
                     const option = document.createElement('option');
                     option.value = booking.id;
-                    option.textContent = `#${booking.id} - ${guest.name}`;
+                    option.textContent = `#${booking.id} - ${guest.name} - $${booking.totalAmount.toFixed(2)}`;
                     option.selected = booking.id === invoice.bookingId;
                     bookingSelect.appendChild(option);
                 }
             });
             
-            // Set values
+            // Fill other fields
             document.getElementById('invoiceIssueDate').value = invoice.issueDate;
             document.getElementById('invoiceDueDate').value = invoice.dueDate;
             document.getElementById('invoiceAmount').value = invoice.amount.toFixed(2);
             document.getElementById('invoiceStatus').value = invoice.status;
             document.getElementById('invoiceNotes').value = invoice.notes || '';
+            
+            // Add event listener to auto-fill amount when booking is selected
+            bookingSelect.addEventListener('change', function() {
+                const bookingId = parseInt(this.value);
+                const booking = hotelData.bookings.find(b => b.id === bookingId);
+                if (booking) {
+                    document.getElementById('invoiceAmount').value = booking.totalAmount.toFixed(2);
+                }
+            });
+            
+            openModal('invoiceModal');
         }
 
         function deleteInvoice(id) {
-            if (confirm('Are you sure you want to delete this invoice?')) {
-                const invoiceIndex = hotelData.invoices.findIndex(i => i.id === id);
-                if (invoiceIndex !== -1) {
-                    hotelData.invoices.splice(invoiceIndex, 1);
-                    saveData();
-                    showNotification('Invoice deleted successfully!', 'success');
-                    loadInvoicesTable();
-                }
+            if (!confirm('Are you sure you want to delete this invoice? This action cannot be undone.')) {
+                return;
             }
+            
+            const invoiceIndex = hotelData.invoices.findIndex(i => i.id === id);
+            if (invoiceIndex === -1) {
+                showNotification('Invoice not found', 'error');
+                return;
+            }
+            
+            const invoice = hotelData.invoices[invoiceIndex];
+            hotelData.invoices.splice(invoiceIndex, 1);
+            saveHotelData();
+            
+            showNotification(`Invoice #${id} deleted successfully!`, 'success');
+            
+            // Log activity
+            logUserActivity(currentUser.id, 'invoice_deleted', `Deleted invoice #${id}`);
+            
+            // Refresh data
+            loadDashboardData();
+            loadInvoicesTable();
         }
 
         // ====================
@@ -3520,98 +5064,388 @@
             
             switch(reportType) {
                 case 'occupancy':
-                    results += `<h4>Occupancy Report</h4>`;
-                    const totalRooms = hotelData.rooms.length;
-                    const occupiedRooms = hotelData.rooms.filter(r => r.status === 'occupied').length;
-                    const occupancyRate = totalRooms > 0 ? (occupiedRooms / totalRooms * 100).toFixed(2) : 0;
-                    
-                    results += `<p>Total Rooms: ${totalRooms}</p>`;
-                    results += `<p>Occupied Rooms: ${occupiedRooms}</p>`;
-                    results += `<p>Occupancy Rate: ${occupancyRate}%</p>`;
-                    
-                    // Room type breakdown
-                    results += `<h5 style="margin-top: 20px;">By Room Type:</h5>`;
-                    const roomTypes = {};
-                    hotelData.rooms.forEach(room => {
-                        if (!roomTypes[room.type]) {
-                            roomTypes[room.type] = { total: 0, occupied: 0 };
-                        }
-                        roomTypes[room.type].total++;
-                        if (room.status === 'occupied') {
-                            roomTypes[room.type].occupied++;
-                        }
-                    });
-                    
-                    for (const [type, data] of Object.entries(roomTypes)) {
-                        const rate = data.total > 0 ? (data.occupied / data.total * 100).toFixed(2) : 0;
-                        results += `<p>${type}: ${data.occupied}/${data.total} (${rate}%)</p>`;
-                    }
+                    results += generateOccupancyReport(reportPeriod, reportFrom, reportTo);
                     break;
                     
                 case 'revenue':
-                    results += `<h4>Revenue Report</h4>`;
-                    const totalRevenue = hotelData.invoices
-                        .filter(i => i.status === 'paid')
-                        .reduce((sum, invoice) => sum + invoice.amount, 0);
-                    
-                    const pendingRevenue = hotelData.invoices
-                        .filter(i => i.status === 'pending')
-                        .reduce((sum, invoice) => sum + invoice.amount, 0);
-                    
-                    results += `<p>Total Revenue: $${totalRevenue.toFixed(2)}</p>`;
-                    results += `<p>Pending Revenue: $${pendingRevenue.toFixed(2)}</p>`;
-                    
-                    // Monthly revenue
-                    results += `<h5 style="margin-top: 20px;">Monthly Revenue:</h5>`;
-                    const monthlyRevenue = {};
-                    hotelData.invoices.forEach(invoice => {
-                        if (invoice.status === 'paid') {
-                            const month = invoice.issueDate.substring(0, 7); // YYYY-MM
-                            monthlyRevenue[month] = (monthlyRevenue[month] || 0) + invoice.amount;
-                        }
-                    });
-                    
-                    for (const [month, revenue] of Object.entries(monthlyRevenue)) {
-                        results += `<p>${month}: $${revenue.toFixed(2)}</p>`;
-                    }
+                    results += generateRevenueReport(reportPeriod, reportFrom, reportTo);
                     break;
                     
                 case 'guests':
-                    results += `<h4>Guest Report</h4>`;
-                    results += `<p>Total Guests: ${hotelData.guests.length}</p>`;
-                    
-                    // Nationality breakdown
-                    results += `<h5 style="margin-top: 20px;">By Nationality:</h5>`;
-                    const nationalities = {};
-                    hotelData.guests.forEach(guest => {
-                        const nationality = guest.nationality || 'Unknown';
-                        nationalities[nationality] = (nationalities[nationality] || 0) + 1;
-                    });
-                    
-                    for (const [nationality, count] of Object.entries(nationalities)) {
-                        results += `<p>${nationality}: ${count}</p>`;
-                    }
+                    results += generateGuestReport(reportPeriod, reportFrom, reportTo);
                     break;
                     
                 case 'bookings':
-                    results += `<h4>Booking Report</h4>`;
-                    const totalBookings = hotelData.bookings.length;
-                    const confirmedBookings = hotelData.bookings.filter(b => b.status === 'confirmed').length;
-                    const cancelledBookings = hotelData.bookings.filter(b => b.status === 'cancelled').length;
-                    
-                    results += `<p>Total Bookings: ${totalBookings}</p>`;
-                    results += `<p>Confirmed: ${confirmedBookings}</p>`;
-                    results += `<p>Cancelled: ${cancelledBookings}</p>`;
-                    results += `<p>Cancellation Rate: ${totalBookings > 0 ? (cancelledBookings / totalBookings * 100).toFixed(2) : 0}%</p>`;
+                    results += generateBookingReport(reportPeriod, reportFrom, reportTo);
                     break;
             }
             
             results += `</div></div>`;
             document.getElementById('reportResults').innerHTML = results;
+            
+            // Log activity
+            logUserActivity(currentUser.id, 'report_generated', `Generated ${reportType} report for ${reportPeriod}`);
+        }
+
+        function generateOccupancyReport(period, from, to) {
+            const totalRooms = hotelData.rooms.length;
+            const occupiedRooms = hotelData.rooms.filter(r => r.status === 'occupied').length;
+            const availableRooms = hotelData.rooms.filter(r => r.status === 'available').length;
+            const maintenanceRooms = hotelData.rooms.filter(r => r.status === 'maintenance').length;
+            const cleaningRooms = hotelData.rooms.filter(r => r.status === 'cleaning').length;
+            
+            const occupancyRate = totalRooms > 0 ? ((occupiedRooms / totalRooms) * 100).toFixed(2) : 0;
+            
+            let report = `<h4>Occupancy Report</h4>`;
+            report += `<p><strong>Report Period:</strong> ${getPeriodDisplay(period, from, to)}</p>`;
+            report += `<p><strong>Total Rooms:</strong> ${totalRooms}</p>`;
+            report += `<p><strong>Occupied Rooms:</strong> ${occupiedRooms}</p>`;
+            report += `<p><strong>Available Rooms:</strong> ${availableRooms}</p>`;
+            report += `<p><strong>Maintenance Rooms:</strong> ${maintenanceRooms}</p>`;
+            report += `<p><strong>Cleaning Rooms:</strong> ${cleaningRooms}</p>`;
+            report += `<p><strong>Occupancy Rate:</strong> ${occupancyRate}%</p>`;
+            
+            // Room type breakdown
+            report += `<h5 style="margin-top: 20px;">Room Type Breakdown:</h5>`;
+            const roomTypes = {};
+            hotelData.rooms.forEach(room => {
+                if (!roomTypes[room.type]) {
+                    roomTypes[room.type] = { total: 0, occupied: 0, available: 0, maintenance: 0, cleaning: 0 };
+                }
+                roomTypes[room.type].total++;
+                roomTypes[room.type][room.status]++;
+            });
+            
+            for (const [type, data] of Object.entries(roomTypes)) {
+                const rate = data.total > 0 ? ((data.occupied / data.total) * 100).toFixed(2) : 0;
+                report += `<p><strong>${type}:</strong> ${data.occupied} occupied, ${data.available} available (${rate}% occupancy)</p>`;
+            }
+            
+            return report;
+        }
+
+        function generateRevenueReport(period, from, to) {
+            const dateRange = getDateRange(period, from, to);
+            
+            // Filter invoices by date range
+            const filteredInvoices = hotelData.invoices.filter(invoice => {
+                const invoiceDate = new Date(invoice.issueDate);
+                return invoiceDate >= dateRange.start && invoiceDate <= dateRange.end;
+            });
+            
+            const totalRevenue = filteredInvoices
+                .filter(i => i.status === 'paid')
+                .reduce((sum, invoice) => sum + invoice.amount, 0);
+            
+            const pendingRevenue = filteredInvoices
+                .filter(i => i.status === 'pending')
+                .reduce((sum, invoice) => sum + invoice.amount, 0);
+            
+            const overdueRevenue = filteredInvoices
+                .filter(i => i.status === 'overdue')
+                .reduce((sum, invoice) => sum + invoice.amount, 0);
+            
+            const cancelledRevenue = filteredInvoices
+                .filter(i => i.status === 'cancelled')
+                .reduce((sum, invoice) => sum + invoice.amount, 0);
+            
+            let report = `<h4>Revenue Report</h4>`;
+            report += `<p><strong>Report Period:</strong> ${getPeriodDisplay(period, from, to)}</p>`;
+            report += `<p><strong>Total Revenue:</strong> $${totalRevenue.toFixed(2)}</p>`;
+            report += `<p><strong>Pending Revenue:</strong> $${pendingRevenue.toFixed(2)}</p>`;
+            report += `<p><strong>Overdue Revenue:</strong> $${overdueRevenue.toFixed(2)}</p>`;
+            report += `<p><strong>Cancelled Revenue:</strong> $${cancelledRevenue.toFixed(2)}</p>`;
+            
+            // Payment status breakdown
+            report += `<h5 style="margin-top: 20px;">Payment Status:</h5>`;
+            const paidCount = filteredInvoices.filter(i => i.status === 'paid').length;
+            const pendingCount = filteredInvoices.filter(i => i.status === 'pending').length;
+            const overdueCount = filteredInvoices.filter(i => i.status === 'overdue').length;
+            const cancelledCount = filteredInvoices.filter(i => i.status === 'cancelled').length;
+            const totalCount = filteredInvoices.length;
+            
+            report += `<p><strong>Paid:</strong> ${paidCount} invoices (${totalCount > 0 ? ((paidCount / totalCount) * 100).toFixed(2) : 0}%)</p>`;
+            report += `<p><strong>Pending:</strong> ${pendingCount} invoices (${totalCount > 0 ? ((pendingCount / totalCount) * 100).toFixed(2) : 0}%)</p>`;
+            report += `<p><strong>Overdue:</strong> ${overdueCount} invoices (${totalCount > 0 ? ((overdueCount / totalCount) * 100).toFixed(2) : 0}%)</p>`;
+            report += `<p><strong>Cancelled:</strong> ${cancelledCount} invoices (${totalCount > 0 ? ((cancelledCount / totalCount) * 100).toFixed(2) : 0}%)</p>`;
+            
+            return report;
+        }
+
+        function generateGuestReport(period, from, to) {
+            const dateRange = getDateRange(period, from, to);
+            
+            // Filter guests by creation date
+            const filteredGuests = hotelData.guests.filter(guest => {
+                const guestDate = new Date(guest.createdAt);
+                return guestDate >= dateRange.start && guestDate <= dateRange.end;
+            });
+            
+            let report = `<h4>Guest Report</h4>`;
+            report += `<p><strong>Report Period:</strong> ${getPeriodDisplay(period, from, to)}</p>`;
+            report += `<p><strong>Total Guests:</strong> ${filteredGuests.length}</p>`;
+            
+            // Nationality breakdown
+            report += `<h5 style="margin-top: 20px;">Nationality Breakdown:</h5>`;
+            const nationalities = {};
+            filteredGuests.forEach(guest => {
+                const nationality = guest.nationality || 'Unknown';
+                nationalities[nationality] = (nationalities[nationality] || 0) + 1;
+            });
+            
+            for (const [nationality, count] of Object.entries(nationalities)) {
+                const percentage = filteredGuests.length > 0 ? ((count / filteredGuests.length) * 100).toFixed(2) : 0;
+                report += `<p><strong>${nationality}:</strong> ${count} guests (${percentage}%)</p>`;
+            }
+            
+            // Guest type (new vs returning)
+            report += `<h5 style="margin-top: 20px;">Guest Type:</h5>`;
+            const newGuests = filteredGuests.length; // Simplified for this example
+            report += `<p><strong>New Guests:</strong> ${newGuests}</p>`;
+            
+            return report;
+        }
+
+        function generateBookingReport(period, from, to) {
+            const dateRange = getDateRange(period, from, to);
+            
+            // Filter bookings by check-in date
+            const filteredBookings = hotelData.bookings.filter(booking => {
+                const bookingDate = new Date(booking.checkIn);
+                return bookingDate >= dateRange.start && bookingDate <= dateRange.end;
+            });
+            
+            const totalBookings = filteredBookings.length;
+            const confirmedBookings = filteredBookings.filter(b => b.status === 'confirmed').length;
+            const pendingBookings = filteredBookings.filter(b => b.status === 'pending').length;
+            const cancelledBookings = filteredBookings.filter(b => b.status === 'cancelled').length;
+            
+            let report = `<h4>Booking Report</h4>`;
+            report += `<p><strong>Report Period:</strong> ${getPeriodDisplay(period, from, to)}</p>`;
+            report += `<p><strong>Total Bookings:</strong> ${totalBookings}</p>`;
+            report += `<p><strong>Confirmed:</strong> ${confirmedBookings}</p>`;
+            report += `<p><strong>Pending:</strong> ${pendingBookings}</p>`;
+            report += `<p><strong>Cancelled:</strong> ${cancelledBookings}</p>`;
+            
+            const cancellationRate = totalBookings > 0 ? ((cancelledBookings / totalBookings) * 100).toFixed(2) : 0;
+            report += `<p><strong>Cancellation Rate:</strong> ${cancellationRate}%</p>`;
+            
+            // Booking source breakdown (simplified)
+            report += `<h5 style="margin-top: 20px;">Booking Statistics:</h5>`;
+            const totalRevenue = filteredBookings.reduce((sum, booking) => sum + booking.totalAmount, 0);
+            const avgBookingValue = totalBookings > 0 ? (totalRevenue / totalBookings).toFixed(2) : 0;
+            
+            report += `<p><strong>Total Revenue:</strong> $${totalRevenue.toFixed(2)}</p>`;
+            report += `<p><strong>Average Booking Value:</strong> $${avgBookingValue}</p>`;
+            
+            return report;
+        }
+
+        function getPeriodDisplay(period, from, to) {
+            const today = new Date();
+            
+            switch(period) {
+                case 'today':
+                    return 'Today';
+                case 'week':
+                    return 'This Week';
+                case 'month':
+                    return 'This Month';
+                case 'quarter':
+                    return 'This Quarter';
+                case 'year':
+                    return 'This Year';
+                case 'custom':
+                    return `${from} to ${to}`;
+                default:
+                    return 'Custom Range';
+            }
+        }
+
+        function getDateRange(period, from, to) {
+            const today = new Date();
+            const start = new Date();
+            const end = new Date();
+            
+            switch(period) {
+                case 'today':
+                    start.setHours(0, 0, 0, 0);
+                    end.setHours(23, 59, 59, 999);
+                    break;
+                case 'week':
+                    start.setDate(today.getDate() - today.getDay());
+                    start.setHours(0, 0, 0, 0);
+                    end.setDate(start.getDate() + 6);
+                    end.setHours(23, 59, 59, 999);
+                    break;
+                case 'month':
+                    start.setDate(1);
+                    start.setHours(0, 0, 0, 0);
+                    end.setMonth(start.getMonth() + 1);
+                    end.setDate(0);
+                    end.setHours(23, 59, 59, 999);
+                    break;
+                case 'quarter':
+                    const quarter = Math.floor(today.getMonth() / 3);
+                    start.setMonth(quarter * 3);
+                    start.setDate(1);
+                    start.setHours(0, 0, 0, 0);
+                    end.setMonth(start.getMonth() + 3);
+                    end.setDate(0);
+                    end.setHours(23, 59, 59, 999);
+                    break;
+                case 'year':
+                    start.setMonth(0);
+                    start.setDate(1);
+                    start.setHours(0, 0, 0, 0);
+                    end.setMonth(11);
+                    end.setDate(31);
+                    end.setHours(23, 59, 59, 999);
+                    break;
+                case 'custom':
+                    start.setTime(new Date(from).getTime());
+                    end.setTime(new Date(to).getTime());
+                    break;
+            }
+            
+            return { start, end };
         }
 
         function exportReport() {
             showNotification('Report exported as PDF (simulated)', 'success');
+            
+            // Log activity
+            logUserActivity(currentUser.id, 'report_exported', 'Exported report as PDF');
+        }
+
+        // ====================
+        // DATA EXPORT/IMPORT
+        // ====================
+        function exportAllData() {
+            if (!checkPermission('admin')) {
+                showNotification('Only administrators can export all data', 'error');
+                return;
+            }
+            
+            const allData = {
+                users: JSON.parse(localStorage.getItem('hotelUsers') || '[]'),
+                activities: JSON.parse(localStorage.getItem('userActivities') || '{}'),
+                hotels: {}
+            };
+            
+            // Get all hotel data
+            for (let i = 0; i < 10; i++) {
+                const hotelKey = `hotelData_${i}`;
+                const hotelData = localStorage.getItem(hotelKey);
+                if (hotelData) {
+                    allData.hotels[i] = JSON.parse(hotelData);
+                }
+            }
+            
+            // Create download
+            const dataStr = JSON.stringify(allData, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            const exportFileDefaultName = `hotel_system_backup_${formatDate(new Date())}.json`;
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+            
+            showNotification('All data exported successfully!', 'success');
+            
+            // Log activity
+            logUserActivity(currentUser.id, 'data_exported', 'Exported all system data');
+        }
+
+        function importAllData() {
+            if (!checkPermission('admin')) {
+                showNotification('Only administrators can import data', 'error');
+                return;
+            }
+            
+            if (!confirm('Importing data will overwrite existing data. Are you sure?')) {
+                return;
+            }
+            
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            
+            input.onchange = function(event) {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    try {
+                        const importedData = JSON.parse(e.target.result);
+                        
+                        // Import users
+                        if (importedData.users) {
+                            localStorage.setItem('hotelUsers', JSON.stringify(importedData.users));
+                        }
+                        
+                        // Import activities
+                        if (importedData.activities) {
+                            localStorage.setItem('userActivities', JSON.stringify(importedData.activities));
+                        }
+                        
+                        // Import hotel data
+                        if (importedData.hotels) {
+                            Object.keys(importedData.hotels).forEach(hotelId => {
+                                localStorage.setItem(
+                                    `hotelData_${hotelId}`, 
+                                    JSON.stringify(importedData.hotels[hotelId])
+                                );
+                            });
+                        }
+                        
+                        showNotification('All data imported successfully!', 'success');
+                        
+                        // Reload current data
+                        if (currentUser) {
+                            loadHotelData(currentUser.hotelId);
+                            if (document.getElementById('usersTable')) {
+                                loadUsersTable();
+                            }
+                            loadDashboardData();
+                        }
+                        
+                        // Log activity
+                        logUserActivity(currentUser.id, 'data_imported', 'Imported all system data');
+                    } catch (error) {
+                        showNotification('Error importing data: ' + error.message, 'error');
+                    }
+                };
+                
+                reader.readAsText(file);
+            };
+            
+            input.click();
+        }
+
+        function resetAllData() {
+            if (!checkPermission('admin')) {
+                showNotification('Only administrators can reset data', 'error');
+                return;
+            }
+            
+            if (!confirm('Are you sure you want to reset ALL data? This will delete everything and cannot be undone.')) {
+                return;
+            }
+            
+            // Clear all localStorage data
+            localStorage.clear();
+            
+            // Reinitialize default data
+            initializeDefaultData();
+            
+            // Reload app
+            if (currentUser) {
+                showLogin();
+            }
+            
+            showNotification('All data has been reset to default', 'success');
         }
 
         // ====================
@@ -3656,79 +5490,16 @@
             hotelData.settings.autoAssignRooms = document.getElementById('autoAssignRooms').checked;
             hotelData.settings.requireDeposit = document.getElementById('requireDeposit').checked;
             
-            saveSettings();
+            saveHotelData();
             showNotification('Settings saved successfully!', 'success');
+            
+            // Log activity
+            logUserActivity(currentUser.id, 'settings_updated', 'Updated system settings');
         }
 
         function cancelSettings() {
             loadSettings();
             showNotification('Settings changes cancelled', 'info');
-        }
-
-        function exportData() {
-            const dataStr = JSON.stringify(hotelData, null, 2);
-            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-            
-            const exportFileDefaultName = `hotel_backup_${formatDate(new Date())}.json`;
-            
-            const linkElement = document.createElement('a');
-            linkElement.setAttribute('href', dataUri);
-            linkElement.setAttribute('download', exportFileDefaultName);
-            linkElement.click();
-            
-            showNotification('Data exported successfully!', 'success');
-        }
-
-        function importData() {
-            const input = document.createElement('input');
-            input.type = 'file';
-            input.accept = '.json';
-            
-            input.onchange = function(event) {
-                const file = event.target.files[0];
-                const reader = new FileReader();
-                
-                reader.onload = function(e) {
-                    try {
-                        const importedData = JSON.parse(e.target.result);
-                        hotelData = importedData;
-                        saveData();
-                        showNotification('Data imported successfully!', 'success');
-                        
-                        // Refresh all tables
-                        loadDashboardData();
-                        loadBookingsTable();
-                        loadRoomsTable();
-                        loadGuestsTable();
-                        loadInvoicesTable();
-                        loadSettings();
-                    } catch (error) {
-                        showNotification('Error importing data: Invalid file format', 'error');
-                    }
-                };
-                
-                reader.readAsText(file);
-            };
-            
-            input.click();
-        }
-
-        function resetData() {
-            if (confirm('Are you sure you want to reset all data? This action cannot be undone.')) {
-                localStorage.removeItem('hotelData');
-                localStorage.removeItem('hotelSettings');
-                hotelData = { rooms: [], bookings: [], guests: [], invoices: [], settings: {} };
-                initializeSampleData();
-                showNotification('All data has been reset to default', 'success');
-                
-                // Refresh all tables
-                loadDashboardData();
-                loadBookingsTable();
-                loadRoomsTable();
-                loadGuestsTable();
-                loadInvoicesTable();
-                loadSettings();
-            }
         }
 
         // ====================
@@ -3749,7 +5520,10 @@
             });
             
             // Show selected tab content
-            document.getElementById(tabName).classList.add('active');
+            const tabElement = document.getElementById(tabName);
+            if (tabElement) {
+                tabElement.classList.add('active');
+            }
             
             // Update page title and description
             const titles = {
@@ -3759,14 +5533,20 @@
                 guests: { title: 'Guest Management', desc: 'Manage guest information and history' },
                 billing: { title: 'Billing & Invoices', desc: 'Manage invoices and payments' },
                 reports: { title: 'Reports & Analytics', desc: 'Generate reports and view analytics' },
+                users: { title: 'User Management', desc: 'Manage system users and permissions' },
                 settings: { title: 'System Settings', desc: 'Configure system preferences and settings' }
             };
             
-            document.getElementById('pageTitle').textContent = titles[tabName].title;
-            document.getElementById('pageDescription').textContent = titles[tabName].desc;
+            if (titles[tabName]) {
+                document.getElementById('pageTitle').textContent = titles[tabName].title;
+                document.getElementById('pageDescription').textContent = titles[tabName].desc;
+            }
             
             // Load data for the tab
             switch(tabName) {
+                case 'dashboard':
+                    loadDashboardData();
+                    break;
                 case 'booking':
                     loadBookingsTable();
                     break;
@@ -3779,6 +5559,9 @@
                 case 'billing':
                     loadInvoicesTable();
                     break;
+                case 'users':
+                    loadUsersTable();
+                    break;
                 case 'reports':
                     // Nothing to load initially
                     break;
@@ -3789,11 +5572,17 @@
         }
 
         function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'flex';
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'flex';
+            }
         }
 
         function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
             editingId = null;
         }
 
@@ -3829,7 +5618,10 @@
         }
 
         function hideNotification() {
-            document.getElementById('notification').style.display = 'none';
+            const notification = document.getElementById('notification');
+            if (notification) {
+                notification.style.display = 'none';
+            }
         }
 
         function updateCurrentDate() {
@@ -3842,6 +5634,32 @@
             };
             const dateString = now.toLocaleDateString('en-US', options);
             document.getElementById('currentDate').textContent = dateString;
+        }
+
+        function setDefaultDates() {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            
+            // Set min dates for date inputs
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.min = formatDate(today);
+            });
+            
+            // Set default values for check-in/out
+            const checkInInputs = document.querySelectorAll('#modalCheckIn, #invoiceIssueDate');
+            checkInInputs.forEach(input => {
+                if (input) input.value = formatDate(today);
+            });
+            
+            const checkOutInputs = document.querySelectorAll('#modalCheckOut, #invoiceDueDate');
+            checkOutInputs.forEach(input => {
+                if (input) {
+                    const dueDate = new Date(today);
+                    dueDate.setDate(dueDate.getDate() + 30);
+                    input.value = formatDate(dueDate);
+                }
+            });
         }
 
         function formatDate(date) {
@@ -3868,18 +5686,6 @@
             const end = new Date(checkOut);
             const diff = end.getTime() - start.getTime();
             return Math.ceil(diff / (1000 * 60 * 60 * 24));
-        }
-
-        function yesterday() {
-            const date = new Date();
-            date.setDate(date.getDate() - 1);
-            return date;
-        }
-
-        function addDays(date, days) {
-            const result = new Date(date);
-            result.setDate(result.getDate() + days);
-            return result;
         }
 
         function toggleTheme() {
@@ -3921,16 +5727,42 @@
             }
             
             // Booking form updates
-            document.getElementById('modalCheckIn').addEventListener('change', updateBookingSummary);
-            document.getElementById('modalCheckOut').addEventListener('change', updateBookingSummary);
-            document.getElementById('modalRoomType').addEventListener('change', updateBookingSummary);
+            const bookingFormInputs = ['modalCheckIn', 'modalCheckOut', 'modalRoomType'];
+            bookingFormInputs.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.addEventListener('change', updateBookingSummary);
+                }
+            });
             
             // Report period toggle
-            document.getElementById('reportPeriod').addEventListener('change', function() {
-                const isCustom = this.value === 'custom';
-                document.getElementById('reportFrom').style.display = isCustom ? 'block' : 'none';
-                document.getElementById('reportTo').style.display = isCustom ? 'block' : 'none';
+            const reportPeriod = document.getElementById('reportPeriod');
+            if (reportPeriod) {
+                reportPeriod.addEventListener('change', function() {
+                    const isCustom = this.value === 'custom';
+                    const reportFrom = document.getElementById('reportFrom');
+                    const reportTo = document.getElementById('reportTo');
+                    
+                    if (reportFrom) reportFrom.style.display = isCustom ? 'block' : 'none';
+                    if (reportTo) reportTo.style.display = isCustom ? 'block' : 'none';
+                });
+            }
+            
+            // Close modals when clicking outside
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.style.display = 'none';
+                        editingId = null;
+                    }
+                });
             });
+            
+            // Close notification when clicking close button
+            const notificationClose = document.querySelector('.notification-close');
+            if (notificationClose) {
+                notificationClose.addEventListener('click', hideNotification);
+            }
         }
     </script>
 </body>
